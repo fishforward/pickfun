@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><!-- InstanceBegin template="/Templates/base.dwt" codeOutsideHTMLIsLocked="false" -->
+
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Pick Fun</title>
+	<!-- InstanceBeginEditable name="head" -->
+	<meta name="keywords" content="Pick Pic & Pick Fun" />
+	<meta name="description" content="图片选择比较，排行" />
+	<%= stylesheet_link_tag 'pickpic.css', :media => 'screen' %>
+	<!--><script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="creato.js"></script>
+	<!-- InstanceEndEditable -->	
+</head>
+
+<body>
+	
+<div id="wrapper">
+
+		<!-- HEADER START -->
+		<div id="header">
+		
+			<h1><%= link_to "Pick Pic Fun", :controller => "picks", :action => "new" %></h1>
+			
+			<ul id="nav">
+				<% if  @Home_current %>
+					<li class="current">
+				<% else %>
+				    <li>
+				<% end %>
+					<%= link_to "Home",  :controller => "picks", :action => "new" %>
+					<!-- <ul>
+						<li><a href="portfolio.html">Al portfoio items</a></li>
+						<li><a href="item.html">One portfolio item</a></li>
+					</ul> -->
+				</li>
+				<% if  @Picks_current %>
+					<li class="current">
+				<% else %>
+				    <li>
+				<% end %>
+					<%= link_to "Picks", :controller => "pics" %>
+					<!-- <ul>
+						<li class="current"><a href="home.html">Blog frontpage</a></li>
+						<li><a href="post.html">Detailed article</a></li>
+						<li><a href="search.html">Search page</a></li>
+					</ul> -->
+				</li>
+				
+				<% if  @Upload_current %>
+					<li class="current">
+				<% else %>
+				    <li>
+				<% end %>
+					<%= link_to "Upload",  :controller => "pics", :action => "new" %>
+					<!-- <ul>
+						<li><a href="hire_me.html">Contact me</a></li>
+					</ul> -->
+				</li>
+				<% if  @About_current %>
+					<li class="current">
+				<% else %>
+				    <li>
+				<% end %>
+					<%= link_to "About", :controller => "pages", :action => "about" %>
+					<!-- <ul>
+						<li><a href="about.html">Read about me</a></li>
+					</ul> -->
+				</li>
+			</ul>
+		
+		</div><!-- end div #header -->
+		<!-- HEADER END -->
+		
+		<!-- CONTENT START -->
+		<div id="container">
+			<div id="content"> 
+				 <section class="round2">
+		            <%= yield %>
+		        </section>
+				
+			</div><!-- end div #content -->
+			
+		</div><!-- end div #container -->
+		<!-- CONTENT END -->
+		
+		<!-- FOOTER START -->
+		<div id="footer-wrap">
+			<div id="footer">
+
+				<!-- Footer first level - start -->
+				<ul>
+					
+					<li class="col-1">
+						<h2>Categories</h2>
+						<ul>
+							<li><a href="#"><strong>Home</strong></a>, <a href="#">Pick</a></li>
+							<li><a href="#"><strong>Pic</strong></a>, <a href="#">Rank</a></li>
+							<li><a href="#"><strong>Upload</strong></a></li>
+						</ul>
+					</li>
+					<li class="col-2">
+						<h2>Todo</h2>
+						<ul>
+							<li><a href="#">Connect to Social</a></li>
+							<li><a href="#">Tag</a></li>
+							<li><a href="#">Pick Of Theme</a></li>
+						</ul>
+					</li>
+					<li class="col-3">
+						<h2>About me</h2>
+						<dl>
+							<dt><a href="#">John Example - Go to about page</a></dt>
+							<dd>For the ideal that I hold dear to my heart.</dd>
+						</dl>
+					</li>
+				</ul>
+				<!-- Footer first level - end -->
+				<!-- Footer second level - start -->
+				<p>&copy; 2011 费仕. All rights reserved. &nbsp; <a href="mailto:fishgyuyi@gmail.com">E-mail me</a>.</p> 
+				<p class="back-to-top"><a href="#">Back to top</a></p>
+				<!-- Footer second level - end -->
+			</div><!-- end div #footer-wrap -->
+		</div><!-- end div #footer -->
+		<!-- FOOTER END -->
+	
+	</div><!-- end div #wrapper -->
+
+</body>
+
+
+</html>

@@ -1,0 +1,31 @@
+<h1>New pick</h1>
+
+<% form_for(@pick) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :user %><br />
+    <%= f.text_field :user %>
+  </p>
+  <p>
+    <%= f.label :ip %><br />
+    <%= f.text_field :ip %>
+  </p>
+  <p>
+    <%= f.label :subject %><br />
+    <%= f.text_field :subject %>
+  </p>
+  <p>
+    <%= f.label :win_pic_id %><br />
+    <%= f.text_field :win_pic_id %>
+  </p>
+  <p>
+    <%= f.label :loss_pic_id %><br />
+    <%= f.text_field :loss_pic_id %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', picks_path %>

@@ -1,0 +1,28 @@
+<p>
+  <b>User:</b>
+  <%=h @pick.user %>
+</p>
+
+<p>
+  <b>Ip:</b>
+  <%=h @pick.ip %>
+</p>
+
+<p>
+  <b>Subject:</b>
+  <%=h @pick.subject %>
+</p>
+
+<p>
+  <b>Win pic:</b>
+  <%=h @pick.win_pic_id %>
+</p>
+
+<p>
+  <b>Loss pic:</b>
+  <%=h @pick.loss_pic_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_pick_path(@pick) %> |
+<%= link_to 'Back', picks_path %>

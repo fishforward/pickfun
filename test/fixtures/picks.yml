@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user: MyString
+  ip: MyString
+  subject: MyString
+  win_pic_id: MyString
+  loss_pic_id: MyString
+
+two:
+  user: MyString
+  ip: MyString
+  subject: MyString
+  win_pic_id: MyString
+  loss_pic_id: MyString

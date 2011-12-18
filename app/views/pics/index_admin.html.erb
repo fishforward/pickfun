@@ -1,0 +1,34 @@
+<h1>Listing pics</h1>
+
+<table>
+  <tr>
+    <th>Keyname</th>
+    <th>Subject</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Image url</th>
+    <th>Scores</th>
+    <th>Wins</th>
+    <th>Losses</th>
+  </tr>
+
+<% @pics.each do |pic| %>
+  <tr>
+    <td><%=h pic.keyname %></td>
+    <td><%=h pic.subject %></td>
+    <td><%=h pic.title %></td>
+    <td><%=h pic.description %></td>
+    <td><%=h pic.image_url %></td>
+    <td><%=h pic.scores %></td>
+    <td><%=h pic.wins %></td>
+    <td><%=h pic.losses %></td>
+    <td><%= link_to 'Show', pic %></td>
+    <td><%= link_to 'Edit', edit_pic_path(pic) %></td>
+    <td><%= link_to 'Destroy', pic, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New pic', new_pic_path %>

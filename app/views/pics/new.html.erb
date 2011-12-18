@@ -1,0 +1,40 @@
+<div class="section">
+	<ul class="news">
+		<li>
+			<h2><a href="#">Upload</a></h2>
+			
+			<p>You can upload any picture...</p>
+				<div class="comment">
+				<% form_for @pic, :url => { :action => "create" } , :html => { :multipart => true } do |f| %>
+<!-- 					 <%= @pic.errors.full_messages %> -->
+					<fieldset>
+						<ul>
+							<li class="half">
+								<%= f.label :title, '名称' %>
+								<%= f.text_field :title %>
+								<font color="red"><%= @pic.errors[:title]%></font>
+							</li>
+							<li>
+								<%= f.label :image_url, '图片' %>
+								<%= file_column_field 'pic', 'image_url' %>
+								<font color="red"><%= @pic.errors[:image_url] %></font>
+							</li>
+							<li>
+								<%= f.label :description, '描述' %>
+								<%= f.text_area :description, :size => "22x5" %>
+								<font color="red"><%= @pic.errors[:description] %></font>
+							</li>
+							<li>
+								<%= f.submit "上传" %>
+							</li>
+						</ul>
+					</fieldset>
+				
+				<% end %>
+			</div>
+		</li>
+	</ul>
+	
+</div>
+
+

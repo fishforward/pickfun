@@ -1,0 +1,44 @@
+<h1>Editing pic</h1>
+
+<% form_for(@pic) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :keyname %><br />
+    <%= f.text_field :keyname %>
+  </p>
+  <p>
+    <%= f.label :subject %><br />
+    <%= f.text_field :subject %>
+  </p>
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </p>
+  <p>
+    <%= f.label :image_url %><br />
+    <%= f.text_field :image_url %>
+  </p>
+  <p>
+    <%= f.label :scores %><br />
+    <%= f.text_field :scores %>
+  </p>
+  <p>
+    <%= f.label :wins %><br />
+    <%= f.text_field :wins %>
+  </p>
+  <p>
+    <%= f.label :losses %><br />
+    <%= f.text_field :losses %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @pic %> |
+<%= link_to 'Back', pics_path %>

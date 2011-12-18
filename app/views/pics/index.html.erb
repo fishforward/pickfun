@@ -1,0 +1,85 @@
+<div class="section">
+	<ul class="news">
+		<li>
+			<h2><a href="#">Pick  Rank</a></h2>
+			
+			<div class="tweetmeme_button">
+				<div class="tweetmemebutton">
+					<a class="count" href="#" title="Failure: Invalid Story URL specified"><span class="c">.</span><br/><span class="t">.</span></a>
+					<!--<a class="retweet" title="" href="#">retweet</a>-->
+			  </div>
+			</div>
+			
+			<div class="section">
+				<ul class="ads big">
+					
+					<% @pics.each_with_index do |pic,i| %>
+					<% @pic = pic %>
+					<% if i % 2 == 0 %>
+					<li>
+					    <%= link_to image_tag( FILE_PATH_PRE + @pic.keyname + MIDDLE_PIC), :controller => "pics", :action => "show", :id => pic.id %>
+						<br>
+					    <div class="popular">
+					 		<ul>
+								<li>scores
+									<dl class="meta">
+										<dt class="comments">Comments</dt> <dd><a href="#"><%= @pic.scores.ceil %> </a></dd>
+									</dl>
+								</li>
+								<li>wins
+									<dl class="meta">
+										<dt class="comments">Comments</dt> <dd><a href="#"><%= @pic.wins %> </a></dd>
+									</dl>
+								</li>
+								<li>losses
+									<dl class="meta">
+										<dt class="comments">Comments</dt> <dd><a href="#"><%= @pic.losses %> </a></dd>
+									</dl>
+								</li>
+							</ul>
+							<p>
+								<a href="#">See history pick</a>
+							</p>
+						</div>
+					</li>
+					<% else %>
+					<li>
+						<%= link_to image_tag(FILE_PATH_PRE + @pic.keyname + MIDDLE_PIC), :controller => "pics", :action => "show", :id => pic.id %>
+					    <br>
+						<div class="popular">
+							<ul>
+								<li>scores
+									<dl class="meta">
+										 <dd><a href="#"><%= @pic.scores.ceil %> </a></dd>
+									</dl>
+								</li>
+								<li>wins
+									<dl class="meta">
+										 <dd><a href="#"><%= @pic.wins %> </a></dd>
+									</dl>
+								</li>
+								<li>losses
+									<dl class="meta">
+										<!--<dt class="comments">Comments</dt>-->
+										 <dd><a href="#"><%= @pic.losses %> </a></dd>
+									</dl>
+								</li>
+							</ul>
+							<p>
+								<a href="#">See history pick</a>
+							</p>
+						</div>		
+					</li>
+				  <% end %>
+				  <% end %>
+				</ul>
+				
+				<p>&nbsp;</p>
+				
+			</div>
+			<div class="section">
+				<%= will_paginate @pics %>
+			</div>
+		</li>
+	</ul>
+</div>
