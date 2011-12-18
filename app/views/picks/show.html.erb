@@ -1,28 +1,121 @@
-<p>
-  <b>User:</b>
-  <%=h @pick.user %>
-</p>
+<div class="section">
+	<ul class="news">
+		<li>
+			<h2><a href="#">PICK  PIC</a></h2>
+			
+<!-- 			<div class="tweetmeme_button">
+				<div class="tweetmemebutton">
+					<a class="count" href="#" title="Failure: Invalid Story URL specified"><span class="c">Percent</span><br/><span class="t"> <%= @pickPercentage %>  /  <%= @picSum %></span></a>
+			 	</div>
+			</div> -->
+						
+			<div class="ingore_pick_mid">
+<!--  				<%= link_to "Next", :controller => "picks", :action => "new" %>  -->
+				<a class="retweet" title="" href="/picks/new">Next</a>
+			</div>
+			
+			<p>&nbsp;</p>
+			
+			<div class="section">
+				<ul class="ads big">
+					<li>
+<!-- 						<a href="#"><img src="images/ads/ad-270-1.jpg" alt="ad img desc" /></a> -->
+						
+						<!-- "l_pic", "image_url", "medium" -->
+					    <a><%= image_tag(FILE_PATH_PRE + @l_pic.keyname + MIDDLE_PIC, :id => "lpic", :class=>"image_wrapper fl_image") %></a>
+						<br>
+					    <div class="popular">
+					 		<ul>
+								<li>scores
+									<dl class="meta">
+										<dt class="comments">Comments</dt> <dd><a href="#"><%= @l_pic.scores.ceil %> </a></dd>
+									</dl>
+								</li>
+								<li>wins
+									<dl class="meta">
+										<dt class="comments">Comments</dt> <dd><a href="#"><%= @l_pic.wins %> </a></dd>
+									</dl>
+								</li>
+								<li>losses
+									<dl class="meta">
+										<dt class="comments">Comments</dt> <dd><a href="#"><%= @l_pic.losses %> </a></dd>
+									</dl>
+								</li>
+							</ul>
+							<p><a href="#">See history pick</a></p>
+						</div>
+					</li>
+<!-- 					<li class="ingore_pick_mid"> -->
+<!-- 		            </li> -->
+					<li>
+<!-- 						<a href="#"><img src="images/ads/ad-270-2.jpg" alt="ad img desc" /></a> -->
+						<a><%= image_tag(FILE_PATH_PRE + @r_pic.keyname + MIDDLE_PIC, :id => "rpic", :class=>"image_wrapper fl_image" ) %></a>
+					    <br>
+						<div class="popular">
+							<ul>
+								<li>scores
+									<dl class="meta">
+										 <dd><a href="#"><%= @r_pic.scores.ceil %> </a></dd>
+									</dl>
+								</li>
+								<li>wins
+									<dl class="meta">
+										 <dd><a href="#"><%= @r_pic.wins %> </a></dd>
+									</dl>
+								</li>
+								<li>losses
+									<dl class="meta">
+										<!--<dt class="comments">Comments</dt>-->
+										 <dd><a href="#"><%= @r_pic.losses %> </a></dd>
+									</dl>
+								</li>
+							</ul>
+							<p><a href="#">See history pick</a></p>
+						</div>		
+					</li>
+				</ul>
+				
+			</div>
+			
+		</li>
+	</ul>
+</div>
 
-<p>
-  <b>Ip:</b>
-  <%=h @pick.ip %>
-</p>
+<div class="section"> 
+	<h2>&nbsp;</h2>
+	<ul class="news">
+		
+		<!-- Post Content - start -->
+		<li>
+			<h2><a href="#">to be continued...</a></h2><!-- Title -->
+		</li>
+	</ul>
+	<!-- Pagination - end -->
+</div>
 
-<p>
-  <b>Subject:</b>
-  <%=h @pick.subject %>
-</p>
+<% form_tag "create", :id => 'form' do -%>
+  
+<div>
+	<input id="l_pic_id" name="l_pic_id" value=<%= @l_pic.id %> type="hidden" />
+	<input id="r_pic_id" name="r_pic_id" value=<%= @r_pic.id %> type="hidden" />
+	<input id="tmp_pic_id" name="tmp_pic_id" value=<%= @r_pic.id %> type="hidden" />
+</div>
 
-<p>
-  <b>Win pic:</b>
-  <%=h @pick.win_pic_id %>
-</p>
+<%= submit_tag "提 交", :class => "submit", :type =>"hidden" %>
 
-<p>
-  <b>Loss pic:</b>
-  <%=h @pick.loss_pic_id %>
-</p>
+<% end %>
 
+ <script language="JavaScript" type="text/JavaScript">
 
-<%= link_to 'Edit', edit_pick_path(@pick) %> |
-<%= link_to 'Back', picks_path %>
+ 	lpic.onclick = function(){
+ 		form.submit();
+	}
+	rpic.onclick = function(){
+	//	alert("r");
+		document.getElementById('tmp_pic_id').value = document.getElementById('r_pic_id').value;
+	 	document.getElementById('r_pic_id').value = document.getElementById('l_pic_id').value;
+	 	document.getElementById('l_pic_id').value = document.getElementById('tmp_pic_id').value;
+		form.submit();
+	}
+
+ </script>
