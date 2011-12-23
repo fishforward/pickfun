@@ -32,6 +32,7 @@ class PicsController < ApplicationController
   # GET /pics/new.xml
   def new
     @pic = Pic.new
+    @default_tags = ''
     
     # 菜单标签配置
     @Upload_current = true;
@@ -62,7 +63,7 @@ class PicsController < ApplicationController
     @pic.wins = 0
     @pic.losses = 0
     @pic.subject = "default"
-
+    
     respond_to do |format|
       if @pic.save
         
@@ -74,6 +75,30 @@ class PicsController < ApplicationController
         
         File.delete(@pic.image_url)
         Dir.delete(File.dirname(@pic.image_url))
+        
+        ## tags处理
+        if @pic.tmptags
+          tmp = @pic.tmptags.gsub(';',' ') #英文的分号
+          tmp = tmp.gsub('；',' ') #中文的分号
+          tmp = tmp.gsub(',',' ')  #英文的逗号
+          tmp = tmp.gsub('，',' ')  #中文的逗号
+          
+          tmp.split.each do |n|
+            tag = Tag.find_by_name(n)
+            if tag == nil
+              tag =Tag.new(
+                :name => n
+              )
+              tag.save
+            end
+            
+            picTag = PicTag.new(
+              :pic_id => @pic.id,
+              :tag_id => tag.id
+            )
+            picTag.save
+          end
+        end
         
         format.html { redirect_to(@pic) }
         format.xml  { render :xml => @pic, :status => :created, :location => @pic }

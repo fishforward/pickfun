@@ -25,6 +25,11 @@
 								<font color="red"><%= @pic.errors[:description] %></font>
 							</li>
 							<li>
+								<%= f.label :tmptags, '标签' %>
+								<%= f.text_field :tmptags %>
+								<font color="red"><%= @pic.errors[:tmptags] %></font>
+							</li>
+							<li>
 								<%= f.submit "上传" %>
 							</li>
 						</ul>

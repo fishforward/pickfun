@@ -1,0 +1,2 @@
+module PicTagsHelper
+end

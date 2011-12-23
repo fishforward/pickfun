@@ -1,5 +1,5 @@
 class Pic < ActiveRecord::Base
-  
+  #has_and_belongs_to_many :tags
   #attr_accessible :scores => 100, :wins => 0, :losses => 0, :subject => "default"
   
   ## 参数校验
@@ -17,6 +17,11 @@ class Pic < ActiveRecord::Base
               :web_root => ""
               
               
+   def add_tags(tags)
+      tags.push_with_attributes(tags)
+   end
+                    
+              
    ## 设置默认值 
    #def initialize
      #:scores => 100   ## 初始100
@@ -32,7 +37,7 @@ class Pic < ActiveRecord::Base
    end 
    
    
-     def pk(winPicId, losePicId)
+   def pk(winPicId, losePicId)
     winPic = Pic.find(winPicId);
     losePic = Pic.find(losePicId);
     

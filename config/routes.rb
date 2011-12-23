@@ -1,4 +1,10 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :pic_tags
+
+  map.resources :pic_tags
+
+  map.resources :tags
+
   map.resources :picks
 
   map.resources :pics

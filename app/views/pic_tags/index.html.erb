@@ -1,0 +1,22 @@
+<h1>Listing pic_tags</h1>
+
+<table>
+  <tr>
+    <th>Pic</th>
+    <th>Tag</th>
+  </tr>
+
+<% @pic_tags.each do |pic_tag| %>
+  <tr>
+    <td><%=h pic_tag.pic_id %></td>
+    <td><%=h pic_tag.tag_id %></td>
+    <td><%= link_to 'Show', pic_tag %></td>
+    <td><%= link_to 'Edit', edit_pic_tag_path(pic_tag) %></td>
+    <td><%= link_to 'Destroy', pic_tag, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New pic_tag', new_pic_tag_path %>

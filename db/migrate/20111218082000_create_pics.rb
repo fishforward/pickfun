@@ -9,6 +9,7 @@ class CreatePics < ActiveRecord::Migration
       t.integer :scores
       t.integer :wins
       t.integer :losses
+      t.string :tmptags
 
       t.timestamps
     end

@@ -1,0 +1,20 @@
+<h1>Editing pic_tag</h1>
+
+<% form_for(@pic_tag) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :pic_id %><br />
+    <%= f.text_field :pic_id %>
+  </p>
+  <p>
+    <%= f.label :tag_id %><br />
+    <%= f.text_field :tag_id %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @pic_tag %> |
+<%= link_to 'Back', pic_tags_path %>

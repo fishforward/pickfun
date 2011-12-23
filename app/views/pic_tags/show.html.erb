@@ -1,0 +1,13 @@
+<p>
+  <b>Pic:</b>
+  <%=h @pic_tag.pic_id %>
+</p>
+
+<p>
+  <b>Tag:</b>
+  <%=h @pic_tag.tag_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_pic_tag_path(@pic_tag) %> |
+<%= link_to 'Back', pic_tags_path %>

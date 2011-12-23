@@ -9,7 +9,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111218082312) do
+ActiveRecord::Schema.define(:version => 20111222171037) do
+
+  create_table "pic_tags", :force => true do |t|
+    t.string   "pic_id"
+    t.string   "tag_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "picks", :force => true do |t|
     t.string   "user"
@@ -30,6 +37,15 @@ ActiveRecord::Schema.define(:version => 20111218082312) do
     t.integer  "scores"
     t.integer  "wins"
     t.integer  "losses"
+    t.string   "tmptags"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tags", :force => true do |t|
+    t.string   "name"
+    t.string   "link"
+    t.string   "memo"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
