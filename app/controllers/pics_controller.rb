@@ -9,7 +9,7 @@ class PicsController < ApplicationController
     @pics = Pic.search(params[:page])
     
     # 菜单标签配置
-    @Picks_current = true;
+    @Pics_current = true;
      
     respond_to do |format|
       format.html # index.html.erb
@@ -21,10 +21,14 @@ class PicsController < ApplicationController
   # GET /pics/1.xml
   def show
     @pic = Pic.find(params[:id])
+    @pic.setTags(@pic.id)
+    
+    # 菜单标签配置
+    @Pics_current = true;
 
     respond_to do |format|
       format.html # show.html.erb
-      format.xml  { render :xml => @pic }
+      format.xml  { render :xml => @pic  }#| @tags
     end
   end
 
@@ -62,7 +66,6 @@ class PicsController < ApplicationController
     @pic.scores = 100
     @pic.wins = 0
     @pic.losses = 0
-    @pic.subject = "default"
     
     respond_to do |format|
       if @pic.save
@@ -79,9 +82,9 @@ class PicsController < ApplicationController
         ## tags处理
         if @pic.tmptags
           tmp = @pic.tmptags.gsub(';',' ') #英文的分号
-          tmp = tmp.gsub('；',' ') #中文的分号
+          #tmp = tmp.gsub('；',' ') #中文的分号
           tmp = tmp.gsub(',',' ')  #英文的逗号
-          tmp = tmp.gsub('，',' ')  #中文的逗号
+          #tmp = tmp.gsub('，',' ')  #中文的逗号
           
           tmp.split.each do |n|
             tag = Tag.find_by_name(n)

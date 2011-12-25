@@ -100,7 +100,7 @@ h1 a { width: 343px; height: 95px; background: url(../images/pickpic-fun-logo.pn
 /*subnav*/
 #nav ul { position: absolute; top: 90px; right: 0; width: 960px; text-align: right; display: none;}
 #nav ul li {  padding: 0 0 3px; margin: 0 0 0 31px; display: inline; }
-#nav ul li a { background: url(../images/stars-1.png) 0 0 no-repeat;  padding:0 0 0 14px; color: #111; line-height: 28px; display: inline; float: none;}
+#nav ul li a { /*background: url(../images/stars-1.png)*/ 0 0 no-repeat;  padding:-2 0 0 10px; color: #111; line-height: 28px; display: inline; float: none;}
 #nav a { text-decoration: none; color: #b2b2b2; }
 
 #nav ul a:hover,

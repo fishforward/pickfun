@@ -10,8 +10,7 @@
 			</div> -->
 						
 			<div class="ingore_pick_mid">
-<!--  				<%= link_to "Next", :controller => "picks", :action => "new" %>  -->
-				<a class="retweet" title="" href="/picks/new">Next</a>
+  				<%= link_to "Next", {:controller => "pick_subjects",:action =>"show", :id => @subjectId } , :class => "retweet" %> 
 			</div>
 			
 			<p>&nbsp;</p>
@@ -19,36 +18,38 @@
 			<div class="section">
 				<ul class="ads big">
 					<li>
-<!-- 						<a href="#"><img src="images/ads/ad-270-1.jpg" alt="ad img desc" /></a> -->
-						
-						<!-- "l_pic", "image_url", "medium" -->
 					    <a><%= image_tag(FILE_PATH_PRE + @l_pic.keyname + MIDDLE_PIC, :id => "lpic", :class=>"image_wrapper fl_image") %></a>
 						<br>
 					    <div class="popular">
 					 		<ul>
 								<li>scores
 									<dl class="meta">
-										<dt class="comments">Comments</dt> <dd><a href="#"><%= @l_pic.scores.ceil %> </a></dd>
+										<dd><a href="#"><%= @l_pic.scores.ceil %> </a></dd>
 									</dl>
 								</li>
 								<li>wins
 									<dl class="meta">
-										<dt class="comments">Comments</dt> <dd><a href="#"><%= @l_pic.wins %> </a></dd>
+										<dd><a href="#"><%= @l_pic.wins %> </a></dd>
 									</dl>
 								</li>
 								<li>losses
 									<dl class="meta">
-										<dt class="comments">Comments</dt> <dd><a href="#"><%= @l_pic.losses %> </a></dd>
+										<dd><a href="#"><%= @l_pic.losses %> </a></dd>
+									</dl>
+								</li>
+								<li>tags
+									<dl class="meta">
+										<dd>
+											<% @pic = @l_pic %>
+											<%= render :partial => "shared/tagtext",  :locals => {:pic => @pic } %> 
+										</dd>
 									</dl>
 								</li>
 							</ul>
 							<p><a href="#">See history pick</a></p>
 						</div>
 					</li>
-<!-- 					<li class="ingore_pick_mid"> -->
-<!-- 		            </li> -->
 					<li>
-<!-- 						<a href="#"><img src="images/ads/ad-270-2.jpg" alt="ad img desc" /></a> -->
 						<a><%= image_tag(FILE_PATH_PRE + @r_pic.keyname + MIDDLE_PIC, :id => "rpic", :class=>"image_wrapper fl_image" ) %></a>
 					    <br>
 						<div class="popular">
@@ -67,6 +68,14 @@
 									<dl class="meta">
 										<!--<dt class="comments">Comments</dt>-->
 										 <dd><a href="#"><%= @r_pic.losses %> </a></dd>
+									</dl>
+								</li>
+								<li>tags
+									<dl class="meta">
+										<dd>
+											<% @pic = @r_pic %>
+											<%= render :partial => "shared/tagtext",  :locals => {:pic => @pic } %> 
+										</dd>
 									</dl>
 								</li>
 							</ul>
@@ -99,6 +108,7 @@
 	<input id="l_pic_id" name="l_pic_id" value=<%= @l_pic.id %> type="hidden" />
 	<input id="r_pic_id" name="r_pic_id" value=<%= @r_pic.id %> type="hidden" />
 	<input id="tmp_pic_id" name="tmp_pic_id" value=<%= @r_pic.id %> type="hidden" />
+	<input id="subjectId" name="subjectId" type="hidden" value=<%= @subjectId+'' %> />
 </div>
 
 <%= submit_tag "提 交", :class => "submit", :type =>"hidden" %>

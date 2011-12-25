@@ -1,0 +1,28 @@
+<h2>Editing subject</h2>
+
+<% form_for(@subject) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :code %><br />
+    <%= f.text_field :code %>
+  </p>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :link %><br />
+    <%= f.text_field :link %>
+  </p>
+  <p>
+    <%= f.label :memo %><br />
+    <%= f.text_field :memo %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @subject %> |
+<%= link_to 'Back', subjects_path %>

@@ -8,10 +8,8 @@
 	<!-- InstanceBeginEditable name="head" -->
 	<meta name="keywords" content="Pick Pic & Pick Fun" />
 	<meta name="description" content="图片选择比较，排行" />
+	<%= javascript_include_tag "js/jquery.js", "js/creato.js" %>
 	<%= stylesheet_link_tag 'pickpic.css', :media => 'screen' %>
-	<!--><script type="text/javascript" src="jquery.js"></script>
-	<script type="text/javascript" src="creato.js"></script>
-	<!-- InstanceEndEditable -->	
 </head>
 
 <body>
@@ -30,22 +28,23 @@
 				    <li>
 				<% end %>
 					<%= link_to "Home",  :controller => "picks", :action => "new" %>
-					<!-- <ul>
-						<li><a href="portfolio.html">Al portfoio items</a></li>
-						<li><a href="item.html">One portfolio item</a></li>
-					</ul> -->
+					 <ul>
+						<li <% if @Home_secode == '1' %> class="current" <%end%> ><%= link_to "美女",  :controller => "pick_subjects",:action => "show", :id => '1' %></li>
+						<li <% if @Home_secode == '2' %> class="current" <%end%> ><%= link_to "风景",  :controller => "pick_subjects",:action => "show", :id => '2' %></li>
+						<li><a href="item.html">玩乐</a></li>
+					</ul> 
 				</li>
-				<% if  @Picks_current %>
+				<% if  @Pics_current %>
 					<li class="current">
 				<% else %>
 				    <li>
 				<% end %>
-					<%= link_to "Picks", :controller => "pics" %>
-					<!-- <ul>
+					<%= link_to "Pics", :controller => "pics" %>
+					<ul>
 						<li class="current"><a href="home.html">Blog frontpage</a></li>
 						<li><a href="post.html">Detailed article</a></li>
 						<li><a href="search.html">Search page</a></li>
-					</ul> -->
+					</ul>
 				</li>
 				
 				<% if  @Upload_current %>

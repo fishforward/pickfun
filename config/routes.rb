@@ -1,5 +1,10 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :pic_tags
+  map.resources :messages
+
+  
+  map.resources :pick_subjects
+
+  map.resources :subjects
 
   map.resources :pic_tags
 

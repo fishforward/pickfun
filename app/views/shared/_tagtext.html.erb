@@ -1,0 +1,5 @@
+<% if(@pic && @pic.tags) %>
+	<% 1.upto(@pic.tags.size) do |i| %>
+		<%=h @pic.tags[i-1].name %>  <% if(i < @pic.tags.size) %>/ <% end %> 
+	<% end %>
+<% end %>

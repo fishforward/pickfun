@@ -1,4 +1,5 @@
 class Pic < ActiveRecord::Base
+  attr_accessor :tags
   #has_and_belongs_to_many :tags
   #attr_accessible :scores => 100, :wins => 0, :losses => 0, :subject => "default"
   
@@ -17,10 +18,22 @@ class Pic < ActiveRecord::Base
               :web_root => ""
               
               
-   def add_tags(tags)
-      tags.push_with_attributes(tags)
-   end
-                    
+  # 根据pic获取tags
+  def setTags(picId)
+    
+    picTags = PicTag.find_all_by_pic_id(picId)
+    puts picTags.size
+    if(picTags)
+      tagIds = Array.new
+      picTags.each do |pt|
+        tagIds << pt.tag_id
+      end
+      if tagIds.size > 0
+        tmp_tags = Tag.find(tagIds, :order => "name desc")
+      end 
+    end
+    @tags = tmp_tags
+   end            
               
    ## 设置默认值 
    #def initialize

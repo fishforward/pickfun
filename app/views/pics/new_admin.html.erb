@@ -20,13 +20,6 @@
 								<font color="red"><%= @pic.errors[:image_url] %></font>
 							</li>
 							<li>
-								<%= f.label :subject, '所属主题' %>
-								<%= select("pic", "subject", 
-									options_for_select(Subject.all.collect {|p| [ p.name, p.id ] } << ["请选择",""],""), { :include_blank => false })
-								%>
-								<font color="red"><%= @pic.errors[:subject] %></font>
-							</li>
-							<li>
 								<%= f.label :description, '描述' %>
 								<%= f.text_area :description, :size => "22x5" %>
 								<font color="red"><%= @pic.errors[:description] %></font>

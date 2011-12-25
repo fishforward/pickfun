@@ -1,0 +1,31 @@
+<div class="section">
+	<ul class="news">
+		<li>
+			<div class="section">
+			<p>
+			  <b>Code:</b>
+			  <%=h @subject.code %>
+			</p>
+			
+			<p>
+			  <b>Name:</b>
+			  <%=h @subject.name %>
+			</p>
+			
+			<p>
+			  <b>Link:</b>
+			  <%=h @subject.link %>
+			</p>
+			
+			<p>
+			  <b>Memo:</b>
+			  <%=h @subject.memo %>
+			</p>
+			
+			
+			<%= link_to 'Edit', edit_subject_path(@subject) %> |
+			<%= link_to 'Back', subjects_path %>
+			</div>
+		</li>
+	</ul>
+</div>
