@@ -19,7 +19,7 @@
 		<!-- HEADER START -->
 		<div id="header">
 		
-			<h1><%= link_to "Pick Pic Fun", :controller => "picks", :action => "new" %></h1>
+			<h1><%= link_to "Pick Pic Fun", :controller => "home" %></h1>
 			
 			<ul id="nav">
 				<% if  @Home_current %>
@@ -27,11 +27,12 @@
 				<% else %>
 				    <li>
 				<% end %>
-					<%= link_to "Home",  :controller => "picks", :action => "new" %>
+					<%= link_to "Home", :controller => "home" %>
 					 <ul>
+					 	<li <% if @Home_secode == '0' %> class="current" <%end%> ><%= link_to "全部",  :controller => "picks",:action => "new" %></li>
 						<li <% if @Home_secode == '1' %> class="current" <%end%> ><%= link_to "美女",  :controller => "pick_subjects",:action => "show", :id => '1' %></li>
 						<li <% if @Home_secode == '2' %> class="current" <%end%> ><%= link_to "风景",  :controller => "pick_subjects",:action => "show", :id => '2' %></li>
-						<li><a href="item.html">玩乐</a></li>
+						<!--<li><a href="item.html">玩乐</a></li>-->
 					</ul> 
 				</li>
 				<% if  @Pics_current %>
@@ -40,11 +41,6 @@
 				    <li>
 				<% end %>
 					<%= link_to "Pics", :controller => "pics" %>
-					<ul>
-						<li class="current"><a href="home.html">Blog frontpage</a></li>
-						<li><a href="post.html">Detailed article</a></li>
-						<li><a href="search.html">Search page</a></li>
-					</ul>
 				</li>
 				
 				<% if  @Upload_current %>
@@ -62,10 +58,12 @@
 				<% else %>
 				    <li>
 				<% end %>
-					<%= link_to "About", :controller => "pages", :action => "about" %>
-					<!-- <ul>
-						<li><a href="about.html">Read about me</a></li>
-					</ul> -->
+					<%= link_to "About", :controller => "about", :action => "message" %>
+					 <ul>
+						<li <% if @About_secode == '1' %> class="current" <%end%> ><%= link_to "Message",  :controller => "about",:action => "message" %></li>
+						<li <% if @About_secode == '2' %> class="current" <%end%> ><%= link_to "Me",  :controller => "about",:action => "me" %></li>
+						
+					</ul> 
 				</li>
 			</ul>
 		

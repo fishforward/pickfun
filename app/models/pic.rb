@@ -22,7 +22,7 @@ class Pic < ActiveRecord::Base
   def setTags(picId)
     
     picTags = PicTag.find_all_by_pic_id(picId)
-    puts picTags.size
+    #puts picTags.size
     if(picTags)
       tagIds = Array.new
       picTags.each do |pt|

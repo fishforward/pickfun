@@ -12,9 +12,9 @@ class UpYun
         
     def upload(path,keyname)
       basic_str = "Basic #{Base64.encode64(''+$Upyun_username+':'+$Upyun_password)}"
-      puts "str="+ basic_str
+      #puts "str="+ basic_str
 
-      puts "hhhttttpppp"+path +keyname
+      #puts "hhhttttpppp"+path +keyname
       #res= $Http.get({"Authorization" => basic_str})#,'Expect' => '', 'Mkdir' => 'true'       , 'content_type' => 'image/jpg'
       #f = $Http['/heap.jpg'].get({"Authorization" => basic_str})
       
@@ -28,8 +28,8 @@ class UpYun
       #puts "123123123"+fileData.class.to_s + fileData.to_s
       res= $Http[PRE_PATH + keyname].put fileData,{"Authorization" => basic_str, 'Content-Length' => fileData.size(),'Expect' => '', 'Mkdir' => 'true'}
       
-      puts "==============" + res.code.to_s
-      puts "==============" + res.body
+      #puts "==============" + res.code.to_s
+      #puts "==============" + res.body
     end
     
 end

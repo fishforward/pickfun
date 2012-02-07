@@ -7,7 +7,8 @@ class PickSubjectsController < ApplicationController
     
     if(subjectId == '0')
       respond_to do |format|
-          format.html { redirect_to :controller=> "picks", :action => "new" }
+          format.html { redirect_to :controller=> "picks", :action => "new",
+                                    :last_l_pic_id => params[:last_l_pic_id], :last_r_pic_id => params[:last_r_pic_id] }
         end
     else
 
@@ -24,9 +25,10 @@ class PickSubjectsController < ApplicationController
         @Home_secode = subjectId
         pickId = @l_pic.id.to_s + "_" + @r_pic.id.to_s
         pickId = pickId + "_" + subjectId
-    
+        
         respond_to do |format|
-          format.html { redirect_to :controller=> "picks", :action => "show", :id => pickId}
+          format.html { redirect_to :controller=> "picks", :action => "show", :id => pickId,
+                                    :last_l_pic_id => params[:last_l_pic_id], :last_r_pic_id => params[:last_r_pic_id] }
         end
      end
      end
