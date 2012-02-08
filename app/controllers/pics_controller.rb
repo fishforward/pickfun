@@ -5,8 +5,11 @@ class PicsController < ApplicationController
   # GET /pics
   # GET /pics.xml
   def index
-  
-    @pics = Pic.search(params[:page])
+    
+    @pics = Hash.new
+    Subject.all.each do |s,i|
+      @pics[s] = (Pic.search(params[:page],s.id))
+    end
     
     # 菜单标签配置
     @Pics_current = true;

@@ -40423,3 +40423,1406 @@ Rendering template within layouts/application
 Rendering home/index
 Rendered shared/_show (3.7ms)
 Completed in 19ms (View: 6, DB: 1) | 200 OK [http://0.0.0.0/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2012-02-07 23:53:44) [GET]
+  [4;36;1mPic Load (0.4ms)[0m   [0;1mSELECT * FROM "pics" ORDER BY RANDOM() LIMIT 1[0m
+  [4;35;1mPic Load (0.2ms)[0m   [0mSELECT * FROM "pics" WHERE (id <> 36) ORDER BY RANDOM() LIMIT 1[0m
+  [4;36;1mPicTag Load (0.2ms)[0m   [0;1mSELECT * FROM "pic_tags" WHERE ("pic_tags"."pic_id" = 36) [0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT * FROM "tags" WHERE ("tags"."id" = 41) ORDER BY name desc[0m
+  [4;36;1mPicTag Load (0.1ms)[0m   [0;1mSELECT * FROM "pic_tags" WHERE ("pic_tags"."pic_id" = 35) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT * FROM "tags" WHERE ("tags"."id" = 40) ORDER BY name desc[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "pics" WHERE (wins > 0 or losses > 0) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "pics" [0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_show (4.9ms)
+Completed in 23ms (View: 11, DB: 1) | 200 OK [http://0.0.0.0/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2012-02-07 23:53:47) [GET]
+  [4;36;1mPic Load (0.5ms)[0m   [0;1mSELECT * FROM "pics" ORDER BY RANDOM() LIMIT 1[0m
+  [4;35;1mPic Load (0.2ms)[0m   [0mSELECT * FROM "pics" WHERE (id <> 37) ORDER BY RANDOM() LIMIT 1[0m
+  [4;36;1mPicTag Load (0.2ms)[0m   [0;1mSELECT * FROM "pic_tags" WHERE ("pic_tags"."pic_id" = 37) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT * FROM "tags" WHERE ("tags"."id" = 42) ORDER BY name desc[0m
+  [4;36;1mPicTag Load (0.1ms)[0m   [0;1mSELECT * FROM "pic_tags" WHERE ("pic_tags"."pic_id" = 36) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT * FROM "tags" WHERE ("tags"."id" = 41) ORDER BY name desc[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "pics" WHERE (wins > 0 or losses > 0) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "pics" [0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_show (2.9ms)
+Completed in 18ms (View: 6, DB: 1) | 200 OK [http://0.0.0.0/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2012-02-07 23:53:48) [GET]
+  [4;36;1mPic Load (0.5ms)[0m   [0;1mSELECT * FROM "pics" ORDER BY RANDOM() LIMIT 1[0m
+  [4;35;1mPic Load (0.2ms)[0m   [0mSELECT * FROM "pics" WHERE (id <> 35) ORDER BY RANDOM() LIMIT 1[0m
+  [4;36;1mPicTag Load (0.1ms)[0m   [0;1mSELECT * FROM "pic_tags" WHERE ("pic_tags"."pic_id" = 35) [0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT * FROM "tags" WHERE ("tags"."id" = 40) ORDER BY name desc[0m
+  [4;36;1mPicTag Load (0.2ms)[0m   [0;1mSELECT * FROM "pic_tags" WHERE ("pic_tags"."pic_id" = 36) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT * FROM "tags" WHERE ("tags"."id" = 41) ORDER BY name desc[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "pics" WHERE (wins > 0 or losses > 0) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "pics" [0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_show (3.2ms)
+Completed in 18ms (View: 6, DB: 1) | 200 OK [http://0.0.0.0/]
+
+
+Processing PicksController#create (for 127.0.0.1 at 2012-02-07 23:53:49) [POST]
+  Parameters: {"r_pic_id"=>"35", "last_l_pic_id"=>"35", "commit"=>"提 \344\272\244", "l_pic_id"=>"36", "authenticity_token"=>"9WvzuDyDH6NMmk/MrFgM8Y4eNGxCk0G+Eoxn4IdhO7k=", "tmp_pic_id"=>"36", "subjectId"=>"0", "last_r_pic_id"=>"36"}
+  [4;36;1mPic Load (0.2ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."id" = 36) [0m
+  [4;35;1mPic Load (0.1ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."id" = 35) [0m
+  [4;36;1mPic Update (0.3ms)[0m   [0;1mUPDATE "pics" SET "updated_at" = '2012-02-07 15:53:49', "wins" = 18, "scores" = 91 WHERE "id" = 36[0m
+  [4;35;1mPic Update (0.3ms)[0m   [0mUPDATE "pics" SET "updated_at" = '2012-02-07 15:53:49', "scores" = 32, "losses" = 20 WHERE "id" = 35[0m
+  [4;36;1mPick Create (0.2ms)[0m   [0;1mINSERT INTO "picks" ("created_at", "loss_pic_id", "updated_at", "subject", "ip", "user", "win_pic_id") VALUES('2012-02-07 15:53:49', '35', '2012-02-07 15:53:49', '0', '127.0.0.1', 'mySelf', '36')[0m
+Redirected to http://0.0.0.0:3000/pick_subjects/0?last_l_pic_id=35&last_r_pic_id=36
+Completed in 21ms (DB: 1) | 302 Found [http://0.0.0.0/picks/create]
+
+
+Processing PickSubjectsController#show (for 127.0.0.1 at 2012-02-07 23:53:49) [GET]
+  Parameters: {"last_l_pic_id"=>"35", "id"=>"0", "last_r_pic_id"=>"36"}
+Redirected to http://0.0.0.0:3000/picks/new?last_l_pic_id=35&last_r_pic_id=36
+Completed in 2ms (DB: 0) | 302 Found [http://0.0.0.0/pick_subjects/0?last_l_pic_id=35&last_r_pic_id=36]
+
+
+Processing PicksController#new (for 127.0.0.1 at 2012-02-07 23:53:49) [GET]
+  Parameters: {"last_l_pic_id"=>"35", "last_r_pic_id"=>"36"}
+  [4;35;1mPic Load (0.5ms)[0m   [0mSELECT * FROM "pics" ORDER BY RANDOM() LIMIT 1[0m
+  [4;36;1mPic Load (0.3ms)[0m   [0;1mSELECT * FROM "pics" WHERE (id <> 35) ORDER BY RANDOM() LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/picks/35_37_?last_l_pic_id=35&last_r_pic_id=36&method=post
+Completed in 7ms (DB: 1) | 302 Found [http://0.0.0.0/picks/new?last_l_pic_id=35&last_r_pic_id=36]
+
+
+Processing PicksController#show (for 127.0.0.1 at 2012-02-07 23:53:49) [GET]
+  Parameters: {"last_l_pic_id"=>"35", "method"=>"post", "id"=>"35_37_", "last_r_pic_id"=>"36"}
+  [4;35;1mPic Load (0.2ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."id" = 35) [0m
+  [4;36;1mPic Load (0.1ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."id" = 36) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."id" = 35) [0m
+  [4;36;1mPicTag Load (0.2ms)[0m   [0;1mSELECT * FROM "pic_tags" WHERE ("pic_tags"."pic_id" = 35) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT * FROM "tags" WHERE ("tags"."id" = 40) ORDER BY name desc[0m
+  [4;36;1mPic Load (0.1ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."id" = 37) [0m
+  [4;35;1mPicTag Load (0.1ms)[0m   [0mSELECT * FROM "pic_tags" WHERE ("pic_tags"."pic_id" = 37) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT * FROM "tags" WHERE ("tags"."id" = 42) ORDER BY name desc[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "pics" WHERE (wins > 0 or losses > 0) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "pics" [0m
+Rendering template within layouts/application
+Rendering picks/show
+Rendered shared/_tagtext (0.1ms)
+Rendered shared/_tagtext (0.1ms)
+Rendered shared/_show (3.7ms)
+Completed in 19ms (View: 6, DB: 1) | 200 OK [http://0.0.0.0/picks/35_37_?last_l_pic_id=35&last_r_pic_id=36&method=post]
+
+
+Processing PicksController#show (for 127.0.0.1 at 2012-02-07 23:54:23) [GET]
+  Parameters: {"last_l_pic_id"=>"35", "method"=>"post", "id"=>"35_37_", "last_r_pic_id"=>"36"}
+  [4;35;1mPic Load (0.1ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."id" = 35) [0m
+  [4;36;1mPic Load (0.1ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."id" = 36) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."id" = 35) [0m
+  [4;36;1mPicTag Load (0.2ms)[0m   [0;1mSELECT * FROM "pic_tags" WHERE ("pic_tags"."pic_id" = 35) [0m
+  [4;35;1mTag Load (0.3ms)[0m   [0mSELECT * FROM "tags" WHERE ("tags"."id" = 40) ORDER BY name desc[0m
+  [4;36;1mPic Load (0.1ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."id" = 37) [0m
+  [4;35;1mPicTag Load (0.1ms)[0m   [0mSELECT * FROM "pic_tags" WHERE ("pic_tags"."pic_id" = 37) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT * FROM "tags" WHERE ("tags"."id" = 42) ORDER BY name desc[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "pics" WHERE (wins > 0 or losses > 0) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "pics" [0m
+Rendering template within layouts/application
+Rendering picks/show
+Rendered shared/_tagtext (0.1ms)
+Rendered shared/_tagtext (0.0ms)
+Rendered shared/_show (5.5ms)
+Completed in 25ms (View: 11, DB: 1) | 200 OK [http://0.0.0.0/picks/35_37_?last_l_pic_id=35&last_r_pic_id=36&method=post]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2012-02-08 00:03:43) [GET]
+  [4;35;1mPic Load (0.5ms)[0m   [0mSELECT * FROM "pics" ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering pics/index
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://0.0.0.0/pics]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2012-02-08 00:06:12) [GET]
+  [4;36;1mPic Load (0.5ms)[0m   [0;1mSELECT * FROM "pics" ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering pics/index
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://0.0.0.0/pics]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2012-02-08 00:06:14) [GET]
+  [4;35;1mPic Load (0.5ms)[0m   [0mSELECT * FROM "pics" ORDER BY RANDOM() LIMIT 1[0m
+  [4;36;1mPic Load (0.2ms)[0m   [0;1mSELECT * FROM "pics" WHERE (id <> 35) ORDER BY RANDOM() LIMIT 1[0m
+  [4;35;1mPicTag Load (0.2ms)[0m   [0mSELECT * FROM "pic_tags" WHERE ("pic_tags"."pic_id" = 35) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT * FROM "tags" WHERE ("tags"."id" = 40) ORDER BY name desc[0m
+  [4;35;1mPicTag Load (0.1ms)[0m   [0mSELECT * FROM "pic_tags" WHERE ("pic_tags"."pic_id" = 37) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT * FROM "tags" WHERE ("tags"."id" = 42) ORDER BY name desc[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "pics" WHERE (wins > 0 or losses > 0) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "pics" [0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_show (3.5ms)
+Completed in 18ms (View: 6, DB: 1) | 200 OK [http://0.0.0.0/]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2012-02-08 00:06:16) [GET]
+  [4;35;1mPic Load (0.5ms)[0m   [0mSELECT * FROM "pics" ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering pics/index
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://0.0.0.0/pics]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2012-02-08 00:06:36) [GET]
+  [4;36;1mPic Load (0.5ms)[0m   [0;1mSELECT * FROM "pics" ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering pics/index
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://0.0.0.0/pics]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2012-02-08 00:06:46) [GET]
+  [4;35;1mPic Load (0.5ms)[0m   [0mSELECT * FROM "pics" ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering pics/index
+Completed in 14ms (View: 10, DB: 0) | 200 OK [http://0.0.0.0/pics]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2012-02-08 20:16:46) [GET]
+  [4;36;1mPic Load (14.5ms)[0m   [0;1mSELECT * FROM "pics" ORDER BY RANDOM() LIMIT 1[0m
+  [4;35;1mPic Load (0.3ms)[0m   [0mSELECT * FROM "pics" WHERE (id <> 36) ORDER BY RANDOM() LIMIT 1[0m
+  [4;36;1mPicTag Load (0.4ms)[0m   [0;1mSELECT * FROM "pic_tags" WHERE ("pic_tags"."pic_id" = 36) [0m
+  [4;35;1mTag Load (0.4ms)[0m   [0mSELECT * FROM "tags" WHERE ("tags"."id" = 41) ORDER BY name desc[0m
+  [4;36;1mPicTag Load (0.1ms)[0m   [0;1mSELECT * FROM "pic_tags" WHERE ("pic_tags"."pic_id" = 38) [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT count(*) AS count_all FROM "pics" WHERE (wins > 0 or losses > 0) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "pics" [0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_show (58.3ms)
+Completed in 399ms (View: 255, DB: 17) | 200 OK [http://0.0.0.0/]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2012-02-08 20:16:50) [GET]
+  [4;35;1mPic Load (0.5ms)[0m   [0mSELECT * FROM "pics" ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering pics/index
+Completed in 16ms (View: 11, DB: 1) | 200 OK [http://0.0.0.0/pics]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2012-02-08 20:21:05) [GET]
+  [4;36;1mPic Load (0.5ms)[0m   [0;1mSELECT * FROM "pics" ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering pics/index
+  [4;35;1mSubject Load (14.1ms)[0m   [0mSELECT * FROM "subjects" [0m
+Completed in 103ms (View: 84, DB: 15) | 200 OK [http://0.0.0.0/pics]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2012-02-08 20:21:31) [GET]
+  [4;36;1mPic Load (0.9ms)[0m   [0;1mSELECT * FROM "pics" ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering pics/index
+  [4;35;1mSubject Load (0.2ms)[0m   [0mSELECT * FROM "subjects" [0m
+Completed in 24ms (View: 15, DB: 1) | 200 OK [http://0.0.0.0/pics]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2012-02-08 20:21:41) [GET]
+  [4;36;1mPic Load (0.6ms)[0m   [0;1mSELECT * FROM "pics" ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering pics/index
+  [4;35;1mSubject Load (0.2ms)[0m   [0mSELECT * FROM "subjects" [0m
+Completed in 20ms (View: 14, DB: 1) | 200 OK [http://0.0.0.0/pics]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2012-02-08 20:22:08) [GET]
+  [4;36;1mPic Load (0.5ms)[0m   [0;1mSELECT * FROM "pics" ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering pics/index
+  [4;35;1mSubject Load (0.2ms)[0m   [0mSELECT * FROM "subjects" [0m
+Completed in 19ms (View: 13, DB: 1) | 200 OK [http://0.0.0.0/pics]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2012-02-08 20:22:17) [GET]
+  [4;36;1mPic Load (0.5ms)[0m   [0;1mSELECT * FROM "pics" ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering pics/index
+  [4;35;1mSubject Load (0.2ms)[0m   [0mSELECT * FROM "subjects" [0m
+Completed in 21ms (View: 17, DB: 1) | 200 OK [http://0.0.0.0/pics]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2012-02-08 20:22:34) [GET]
+  [4;36;1mPic Load (0.7ms)[0m   [0;1mSELECT * FROM "pics" ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering pics/index
+  [4;35;1mSubject Load (0.2ms)[0m   [0mSELECT * FROM "subjects" [0m
+Completed in 24ms (View: 16, DB: 1) | 200 OK [http://0.0.0.0/pics]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2012-02-08 20:34:50) [GET]
+  [4;36;1mSubject Load (0.4ms)[0m   [0;1mSELECT * FROM "subjects" [0m
+
+SyntaxError (/Users/fishforward/Documents/Aptana Studio 3 Workspace/pickpic/app/models/pic.rb:49: syntax error, unexpected tASSOC, expecting kEND
+             :order => 'scores desc'  
+                      ^):
+  app/controllers/pics_controller.rb:10:in `index'
+  app/controllers/pics_controller.rb:9:in `each'
+  app/controllers/pics_controller.rb:9:in `index'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (68.3ms)
+Rendered rescues/_request_and_response (19.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PicsController#index (for 127.0.0.1 at 2012-02-08 20:35:01) [GET]
+  [4;35;1mSubject Load (0.4ms)[0m   [0mSELECT * FROM "subjects" [0m
+
+ArgumentError (Unknown key(s): subject):
+  /Users/fishforward/.gem/ruby/1.8/gems/mislav-will_paginate-2.3.11/lib/will_paginate/finder.rb:82:in `send'
+  /Users/fishforward/.gem/ruby/1.8/gems/mislav-will_paginate-2.3.11/lib/will_paginate/finder.rb:82:in `paginate'
+  /Users/fishforward/.gem/ruby/1.8/gems/mislav-will_paginate-2.3.11/lib/will_paginate/collection.rb:87:in `create'
+  /Users/fishforward/.gem/ruby/1.8/gems/mislav-will_paginate-2.3.11/lib/will_paginate/finder.rb:76:in `paginate'
+  app/models/pic.rb:49:in `search'
+  app/controllers/pics_controller.rb:10:in `index'
+  app/controllers/pics_controller.rb:9:in `each'
+  app/controllers/pics_controller.rb:9:in `index'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (25.6ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PicsController#index (for 127.0.0.1 at 2012-02-08 20:39:00) [GET]
+  [4;36;1mSubject Load (0.4ms)[0m   [0;1mSELECT * FROM "subjects" [0m
+  [4;35;1mPic Load (0.3ms)[0m   [0mSELECT * FROM "pics" WHERE (subject = 1) ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.push):
+  app/controllers/pics_controller.rb:10:in `index'
+  app/controllers/pics_controller.rb:9:in `each'
+  app/controllers/pics_controller.rb:9:in `index'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (66.3ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PicsController#index (for 127.0.0.1 at 2012-02-08 20:39:37) [GET]
+  [4;36;1mSubject Load (0.4ms)[0m   [0;1mSELECT * FROM "subjects" [0m
+  [4;35;1mPic Load (0.4ms)[0m   [0mSELECT * FROM "pics" WHERE (subject = 1) ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+  [4;36;1mPic Load (0.2ms)[0m   [0;1mSELECT * FROM "pics" WHERE (subject = 2) ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering pics/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "subjects" [0m
+
+ActionView::TemplateError (no implicit conversion from nil to integer) on line #17 of app/views/pics/index.html.erb:
+14: 			<div class="section">
+15: 				<ul class="ads big">
+16: 					
+17: 					<% @pics[n].each_with_index do |pic,i| %>
+18: 					<% @pic = pic %>
+19: 					<% if i % 2 == 0 %>
+20: 					<li>
+
+    app/views/pics/index.html.erb:17:in `[]'
+    app/views/pics/index.html.erb:17
+    app/views/pics/index.html.erb:3:in `each'
+    app/views/pics/index.html.erb:3
+    app/controllers/pics_controller.rb:17:in `index'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (30.8ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PicsController#index (for 127.0.0.1 at 2012-02-08 20:40:12) [GET]
+  [4;36;1mSubject Load (0.3ms)[0m   [0;1mSELECT * FROM "subjects" [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "subjects" [0m
+  [4;36;1mPic Load (0.3ms)[0m   [0;1mSELECT * FROM "pics" WHERE (subject = 1) ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+  [4;35;1mPic Load (0.2ms)[0m   [0mSELECT * FROM "pics" WHERE (subject = 2) ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering pics/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "subjects" [0m
+
+ActionView::TemplateError (no implicit conversion from nil to integer) on line #17 of app/views/pics/index.html.erb:
+14: 			<div class="section">
+15: 				<ul class="ads big">
+16: 					
+17: 					<% @pics[n].each_with_index do |pic,i| %>
+18: 					<% @pic = pic %>
+19: 					<% if i % 2 == 0 %>
+20: 					<li>
+
+    app/views/pics/index.html.erb:17:in `[]'
+    app/views/pics/index.html.erb:17
+    app/views/pics/index.html.erb:3:in `each'
+    app/views/pics/index.html.erb:3
+    app/controllers/pics_controller.rb:18:in `index'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (34.9ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PicsController#index (for 127.0.0.1 at 2012-02-08 20:41:14) [GET]
+  [4;35;1mSubject Load (0.4ms)[0m   [0mSELECT * FROM "subjects" [0m
+  [4;36;1mPic Load (0.3ms)[0m   [0;1mSELECT * FROM "pics" WHERE (subject = 1) ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+  [4;35;1mPic Load (0.2ms)[0m   [0mSELECT * FROM "pics" WHERE (subject = 2) ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering pics/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "subjects" [0m
+
+ActionView::TemplateError (no implicit conversion from nil to integer) on line #17 of app/views/pics/index.html.erb:
+14: 			<div class="section">
+15: 				<ul class="ads big">
+16: 					
+17: 					<% @pics[n].each_with_index do |pic,i| %>
+18: 					<% @pic = pic %>
+19: 					<% if i % 2 == 0 %>
+20: 					<li>
+
+    app/views/pics/index.html.erb:17:in `[]'
+    app/views/pics/index.html.erb:17
+    app/views/pics/index.html.erb:3:in `each'
+    app/views/pics/index.html.erb:3
+    app/controllers/pics_controller.rb:18:in `index'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (36.3ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PicsController#index (for 127.0.0.1 at 2012-02-08 20:41:16) [GET]
+  [4;35;1mSubject Load (0.4ms)[0m   [0mSELECT * FROM "subjects" [0m
+  [4;36;1mPic Load (0.3ms)[0m   [0;1mSELECT * FROM "pics" WHERE (subject = 1) ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+  [4;35;1mPic Load (0.2ms)[0m   [0mSELECT * FROM "pics" WHERE (subject = 2) ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering pics/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "subjects" [0m
+
+ActionView::TemplateError (no implicit conversion from nil to integer) on line #17 of app/views/pics/index.html.erb:
+14: 			<div class="section">
+15: 				<ul class="ads big">
+16: 					
+17: 					<% @pics[n].each_with_index do |pic,i| %>
+18: 					<% @pic = pic %>
+19: 					<% if i % 2 == 0 %>
+20: 					<li>
+
+    app/views/pics/index.html.erb:17:in `[]'
+    app/views/pics/index.html.erb:17
+    app/views/pics/index.html.erb:3:in `each'
+    app/views/pics/index.html.erb:3
+    app/controllers/pics_controller.rb:18:in `index'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (82.8ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PicsController#index (for 127.0.0.1 at 2012-02-08 20:42:04) [GET]
+  [4;35;1mSubject Load (0.4ms)[0m   [0mSELECT * FROM "subjects" [0m
+  [4;36;1mPic Load (0.3ms)[0m   [0;1mSELECT * FROM "pics" WHERE (subject = 1) ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+  [4;35;1mPic Load (0.3ms)[0m   [0mSELECT * FROM "pics" WHERE (subject = 2) ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering pics/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "subjects" [0m
+
+ActionView::TemplateError (no implicit conversion from nil to integer) on line #17 of app/views/pics/index.html.erb:
+14: 			<div class="section">
+15: 				<ul class="ads big">
+16: 					
+17: 					<% @pics[n].each_with_index do |pic,i| %>
+18: 					<% @pic = pic %>
+19: 					<% if i % 2 == 0 %>
+20: 					<li>
+
+    app/views/pics/index.html.erb:17:in `[]'
+    app/views/pics/index.html.erb:17
+    app/views/pics/index.html.erb:3:in `each'
+    app/views/pics/index.html.erb:3
+    app/controllers/pics_controller.rb:19:in `index'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (32.0ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PicsController#index (for 127.0.0.1 at 2012-02-08 20:44:58) [GET]
+  [4;36;1mSubject Load (0.4ms)[0m   [0;1mSELECT * FROM "subjects" [0m
+  [4;35;1mPic Load (0.4ms)[0m   [0mSELECT * FROM "pics" WHERE (subject = 1) ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+  [4;36;1mPic Load (0.4ms)[0m   [0;1mSELECT * FROM "pics" WHERE (subject = 2) ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering pics/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "subjects" [0m
+
+ActionView::TemplateError (no implicit conversion from nil to integer) on line #17 of app/views/pics/index.html.erb:
+14: 			<div class="section">
+15: 				<ul class="ads big">
+16: 					
+17: 					<% @pics[n].each_with_index do |pic,i| %>
+18: 					<% @pic = pic %>
+19: 					<% if i % 2 == 0 %>
+20: 					<li>
+
+    app/views/pics/index.html.erb:17:in `[]'
+    app/views/pics/index.html.erb:17
+    app/views/pics/index.html.erb:3:in `each'
+    app/views/pics/index.html.erb:3
+    app/controllers/pics_controller.rb:19:in `index'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (31.3ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PicsController#index (for 127.0.0.1 at 2012-02-08 20:45:04) [GET]
+  [4;36;1mSubject Load (0.4ms)[0m   [0;1mSELECT * FROM "subjects" [0m
+  [4;35;1mPic Load (0.3ms)[0m   [0mSELECT * FROM "pics" WHERE (subject = 1) ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+  [4;36;1mPic Load (0.3ms)[0m   [0;1mSELECT * FROM "pics" WHERE (subject = 2) ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering pics/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "subjects" [0m
+
+ActionView::TemplateError (no implicit conversion from nil to integer) on line #17 of app/views/pics/index.html.erb:
+14: 			<div class="section">
+15: 				<ul class="ads big">
+16: 					
+17: 					<% @pics[n].each_with_index do |pic,i| %>
+18: 					<% @pic = pic %>
+19: 					<% if i % 2 == 0 %>
+20: 					<li>
+
+    app/views/pics/index.html.erb:17:in `[]'
+    app/views/pics/index.html.erb:17
+    app/views/pics/index.html.erb:3:in `each'
+    app/views/pics/index.html.erb:3
+    app/controllers/pics_controller.rb:19:in `index'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (32.3ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PicsController#index (for 127.0.0.1 at 2012-02-08 20:45:27) [GET]
+  [4;36;1mSubject Load (0.4ms)[0m   [0;1mSELECT * FROM "subjects" [0m
+  [4;35;1mPic Load (0.4ms)[0m   [0mSELECT * FROM "pics" WHERE (subject = 1) ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+  [4;36;1mPic Load (0.2ms)[0m   [0;1mSELECT * FROM "pics" WHERE (subject = 2) ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering pics/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "subjects" [0m
+
+ActionView::TemplateError (no implicit conversion from nil to integer) on line #17 of app/views/pics/index.html.erb:
+14: 			<div class="section">
+15: 				<ul class="ads big">
+16: 					
+17: 					<% @pics[n].each_with_index do |pic,i| %>
+18: 					<% @pic = pic %>
+19: 					<% if i % 2 == 0 %>
+20: 					<li>
+
+    app/views/pics/index.html.erb:17:in `[]'
+    app/views/pics/index.html.erb:17
+    app/views/pics/index.html.erb:3:in `each'
+    app/views/pics/index.html.erb:3
+    app/controllers/pics_controller.rb:19:in `index'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (35.1ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PicsController#index (for 127.0.0.1 at 2012-02-08 20:46:08) [GET]
+  [4;36;1mSubject Load (0.4ms)[0m   [0;1mSELECT * FROM "subjects" [0m
+  [4;35;1mPic Load (0.3ms)[0m   [0mSELECT * FROM "pics" WHERE (subject = 1) ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+  [4;36;1mPic Load (0.3ms)[0m   [0;1mSELECT * FROM "pics" WHERE (subject = 2) ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering pics/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "subjects" [0m
+
+ActionView::TemplateError (no implicit conversion from nil to integer) on line #17 of app/views/pics/index.html.erb:
+14: 			<div class="section">
+15: 				<ul class="ads big">
+16: 					
+17: 					<% @pics[n].each_with_index do |pic,i| %>
+18: 					<% @pic = pic %>
+19: 					<% if i % 2 == 0 %>
+20: 					<li>
+
+    app/views/pics/index.html.erb:17:in `[]'
+    app/views/pics/index.html.erb:17
+    app/views/pics/index.html.erb:3:in `each'
+    app/views/pics/index.html.erb:3
+    app/controllers/pics_controller.rb:19:in `index'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (36.3ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PicsController#index (for 127.0.0.1 at 2012-02-08 20:47:56) [GET]
+  [4;36;1mSubject Load (0.4ms)[0m   [0;1mSELECT * FROM "subjects" [0m
+  [4;35;1mPic Load (0.5ms)[0m   [0mSELECT * FROM "pics" WHERE (subject = 1) ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+  [4;36;1mPic Load (0.3ms)[0m   [0;1mSELECT * FROM "pics" WHERE (subject = 2) ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering pics/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "subjects" [0m
+
+ActionView::TemplateError (no implicit conversion from nil to integer) on line #17 of app/views/pics/index.html.erb:
+14: 			<div class="section">
+15: 				<ul class="ads big">
+16: 					
+17: 					<% @pics[n].each_with_index do |pic,i| %>
+18: 					<% @pic = pic %>
+19: 					<% if i % 2 == 0 %>
+20: 					<li>
+
+    app/views/pics/index.html.erb:17:in `[]'
+    app/views/pics/index.html.erb:17
+    app/views/pics/index.html.erb:3:in `each'
+    app/views/pics/index.html.erb:3
+    app/controllers/pics_controller.rb:19:in `index'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (38.1ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PicsController#index (for 127.0.0.1 at 2012-02-08 20:48:32) [GET]
+  [4;36;1mSubject Load (0.4ms)[0m   [0;1mSELECT * FROM "subjects" [0m
+  [4;35;1mPic Load (0.3ms)[0m   [0mSELECT * FROM "pics" WHERE (subject = 1) ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+  [4;36;1mPic Load (0.2ms)[0m   [0;1mSELECT * FROM "pics" WHERE (subject = 2) ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering pics/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "subjects" [0m
+
+ActionView::TemplateError (no implicit conversion from nil to integer) on line #17 of app/views/pics/index.html.erb:
+14: 			<div class="section">
+15: 				<ul class="ads big">
+16: 					
+17: 					<% @pics[n].each_with_index do |pic,i| %>
+18: 					<% @pic = pic %>
+19: 					<% if i % 2 == 0 %>
+20: 					<li>
+
+    app/views/pics/index.html.erb:17:in `[]'
+    app/views/pics/index.html.erb:17
+    app/views/pics/index.html.erb:3:in `each'
+    app/views/pics/index.html.erb:3
+    app/controllers/pics_controller.rb:19:in `index'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (31.7ms)
+Rendered rescues/_request_and_response (0.9ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PicsController#index (for 127.0.0.1 at 2012-02-08 20:50:18) [GET]
+  [4;36;1mSubject Load (0.3ms)[0m   [0;1mSELECT * FROM "subjects" [0m
+  [4;35;1mPic Load (0.3ms)[0m   [0mSELECT * FROM "pics" WHERE (subject = 1) ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "pics" WHERE (subject = 1) ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+  [4;35;1mPic Load (0.2ms)[0m   [0mSELECT * FROM "pics" WHERE (subject = 2) ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "pics" WHERE (subject = 2) ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering pics/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "subjects" [0m
+
+ActionView::TemplateError (no implicit conversion from nil to integer) on line #17 of app/views/pics/index.html.erb:
+14: 			<div class="section">
+15: 				<ul class="ads big">
+16: 					
+17: 					<% @pics[n].each_with_index do |pic,i| %>
+18: 					<% @pic = pic %>
+19: 					<% if i % 2 == 0 %>
+20: 					<li>
+
+    app/views/pics/index.html.erb:17:in `[]'
+    app/views/pics/index.html.erb:17
+    app/views/pics/index.html.erb:3:in `each'
+    app/views/pics/index.html.erb:3
+    app/controllers/pics_controller.rb:20:in `index'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (39.0ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PicsController#index (for 127.0.0.1 at 2012-02-08 20:55:11) [GET]
+  [4;36;1mSubject Load (0.4ms)[0m   [0;1mSELECT * FROM "subjects" [0m
+
+TypeError (no implicit conversion from nil to integer):
+  app/controllers/pics_controller.rb:12:in `[]'
+  app/controllers/pics_controller.rb:12:in `index'
+  app/controllers/pics_controller.rb:10:in `each'
+  app/controllers/pics_controller.rb:10:in `index'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (73.4ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PicsController#index (for 127.0.0.1 at 2012-02-08 21:00:50) [GET]
+  [4;35;1mSubject Load (0.4ms)[0m   [0mSELECT * FROM "subjects" [0m
+  [4;36;1mPic Load (0.3ms)[0m   [0;1mSELECT * FROM "pics" WHERE (subject = 1) ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "pics" WHERE (subject = 1) ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+  [4;36;1mPic Load (0.3ms)[0m   [0;1mSELECT * FROM "pics" WHERE (subject = 2) ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "pics" WHERE (subject = 2) ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering pics/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "subjects" [0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each_with_index) on line #17 of app/views/pics/index.html.erb:
+14: 			<div class="section">
+15: 				<ul class="ads big">
+16: 					
+17: 					<% @pics[n].each_with_index do |pic,i| %>
+18: 					<% @pic = pic %>
+19: 					<% if i % 2 == 0 %>
+20: 					<li>
+
+    app/views/pics/index.html.erb:17
+    app/views/pics/index.html.erb:3:in `each'
+    app/views/pics/index.html.erb:3
+    app/controllers/pics_controller.rb:19:in `index'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (41.2ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PicsController#index (for 127.0.0.1 at 2012-02-08 21:02:28) [GET]
+  [4;35;1mSubject Load (0.4ms)[0m   [0mSELECT * FROM "subjects" [0m
+  [4;36;1mPic Load (0.3ms)[0m   [0;1mSELECT * FROM "pics" WHERE (subject = 1) ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "pics" WHERE (subject = 1) ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+  [4;36;1mPic Load (0.2ms)[0m   [0;1mSELECT * FROM "pics" WHERE (subject = 2) ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "pics" WHERE (subject = 2) ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering pics/index
+
+ActionView::TemplateError (undefined method `total_pages' for #<Hash:0x1041a1850>) on line #82 of app/views/pics/index.html.erb:
+79: 				
+80: 			</div>
+81: 			<div class="section">
+82: 				<%= will_paginate @pics %>
+83: 			</div>
+84: 		</li>
+85: 		<% end %>
+
+    /Users/fishforward/.gem/ruby/1.8/gems/mislav-will_paginate-2.3.11/lib/will_paginate/view_helpers.rb:197:in `total_pages_for_collection'
+    /Users/fishforward/.gem/ruby/1.8/gems/mislav-will_paginate-2.3.11/lib/will_paginate/view_helpers.rb:98:in `will_paginate'
+    app/views/pics/index.html.erb:82
+    app/views/pics/index.html.erb:3:in `each'
+    app/views/pics/index.html.erb:3
+    app/controllers/pics_controller.rb:19:in `index'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (32.6ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2012-02-08 21:04:10) [GET]
+  [4;36;1mPic Load (0.6ms)[0m   [0;1mSELECT * FROM "pics" ORDER BY RANDOM() LIMIT 1[0m
+  [4;35;1mPic Load (0.3ms)[0m   [0mSELECT * FROM "pics" WHERE (id <> 38) ORDER BY RANDOM() LIMIT 1[0m
+  [4;36;1mPicTag Load (0.1ms)[0m   [0;1mSELECT * FROM "pic_tags" WHERE ("pic_tags"."pic_id" = 38) [0m
+  [4;35;1mPicTag Load (0.1ms)[0m   [0mSELECT * FROM "pic_tags" WHERE ("pic_tags"."pic_id" = 35) [0m
+  [4;36;1mTag Load (0.3ms)[0m   [0;1mSELECT * FROM "tags" WHERE ("tags"."id" = 40) ORDER BY name desc[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "pics" WHERE (wins > 0 or losses > 0) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "pics" [0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_show (5.7ms)
+Completed in 47ms (View: 26, DB: 2) | 200 OK [http://0.0.0.0/]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2012-02-08 21:04:13) [GET]
+  [4;35;1mSubject Load (0.3ms)[0m   [0mSELECT * FROM "subjects" [0m
+  [4;36;1mPic Load (0.3ms)[0m   [0;1mSELECT * FROM "pics" WHERE (subject = 1) ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "pics" WHERE (subject = 1) ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+  [4;36;1mPic Load (0.4ms)[0m   [0;1mSELECT * FROM "pics" WHERE (subject = 2) ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "pics" WHERE (subject = 2) ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering pics/index
+Completed in 30ms (View: 17, DB: 1) | 200 OK [http://0.0.0.0/pics]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2012-02-08 21:04:32) [GET]
+  [4;36;1mSubject Load (0.4ms)[0m   [0;1mSELECT * FROM "subjects" [0m
+  [4;35;1mPic Load (0.3ms)[0m   [0mSELECT * FROM "pics" WHERE (subject = 1) ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "pics" WHERE (subject = 1) ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+  [4;35;1mPic Load (0.2ms)[0m   [0mSELECT * FROM "pics" WHERE (subject = 2) ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "pics" WHERE (subject = 2) ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering pics/index
+Completed in 64ms (View: 8, DB: 1) | 200 OK [http://0.0.0.0/pics]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2012-02-08 21:05:09) [GET]
+  [4;35;1mSubject Load (0.3ms)[0m   [0mSELECT * FROM "subjects" [0m
+  [4;36;1mPic Load (0.3ms)[0m   [0;1mSELECT * FROM "pics" WHERE (subject = 1) ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+  [4;35;1mPic Load (0.2ms)[0m   [0mSELECT * FROM "pics" WHERE (subject = 2) ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering pics/index
+Completed in 17ms (View: 9, DB: 1) | 200 OK [http://0.0.0.0/pics]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2012-02-08 21:05:17) [GET]
+  [4;36;1mSubject Load (0.4ms)[0m   [0;1mSELECT * FROM "subjects" [0m
+  [4;35;1mPic Load (0.6ms)[0m   [0mSELECT * FROM "pics" WHERE (subject = 1) ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+  [4;36;1mPic Load (0.3ms)[0m   [0;1mSELECT * FROM "pics" WHERE (subject = 2) ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering pics/index
+Completed in 22ms (View: 11, DB: 1) | 200 OK [http://0.0.0.0/pics]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2012-02-08 23:35:13) [GET]
+  [4;35;1mPic Load (0.4ms)[0m   [0mSELECT * FROM "pics" ORDER BY RANDOM() LIMIT 1[0m
+  [4;36;1mPic Load (0.2ms)[0m   [0;1mSELECT * FROM "pics" WHERE (id <> 35) ORDER BY RANDOM() LIMIT 1[0m
+  [4;35;1mPicTag Load (0.2ms)[0m   [0mSELECT * FROM "pic_tags" WHERE ("pic_tags"."pic_id" = 35) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT * FROM "tags" WHERE ("tags"."id" = 40) ORDER BY name desc[0m
+  [4;35;1mPicTag Load (0.1ms)[0m   [0mSELECT * FROM "pic_tags" WHERE ("pic_tags"."pic_id" = 36) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT * FROM "tags" WHERE ("tags"."id" = 41) ORDER BY name desc[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "pics" WHERE (wins > 0 or losses > 0) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "pics" [0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_show (2.7ms)
+Completed in 52ms (View: 5, DB: 1) | 200 OK [http://0.0.0.0/]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2012-02-08 23:35:16) [GET]
+  [4;35;1mSubject Load (0.4ms)[0m   [0mSELECT * FROM "subjects" [0m
+  [4;36;1mPic Load (0.3ms)[0m   [0;1mSELECT * FROM "pics" WHERE (subject = 1) ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+  [4;35;1mPic Load (0.2ms)[0m   [0mSELECT * FROM "pics" WHERE (subject = 2) ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering pics/index
+Completed in 59ms (View: 50, DB: 1) | 200 OK [http://0.0.0.0/pics]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2012-02-08 23:43:28) [GET]
+  [4;36;1mPic Load (0.5ms)[0m   [0;1mSELECT * FROM "pics" ORDER BY RANDOM() LIMIT 1[0m
+  [4;35;1mPic Load (0.2ms)[0m   [0mSELECT * FROM "pics" WHERE (id <> 37) ORDER BY RANDOM() LIMIT 1[0m
+  [4;36;1mPicTag Load (0.2ms)[0m   [0;1mSELECT * FROM "pic_tags" WHERE ("pic_tags"."pic_id" = 37) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT * FROM "tags" WHERE ("tags"."id" = 42) ORDER BY name desc[0m
+  [4;36;1mPicTag Load (0.1ms)[0m   [0;1mSELECT * FROM "pic_tags" WHERE ("pic_tags"."pic_id" = 36) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT * FROM "tags" WHERE ("tags"."id" = 41) ORDER BY name desc[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "pics" WHERE (wins > 0 or losses > 0) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "pics" [0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_show (2.8ms)
+Completed in 17ms (View: 5, DB: 1) | 200 OK [http://0.0.0.0/]
+
+
+Processing PicksController#create (for 127.0.0.1 at 2012-02-08 23:43:53) [POST]
+  Parameters: {"r_pic_id"=>"36", "last_l_pic_id"=>"37", "commit"=>"提 \344\272\244", "l_pic_id"=>"37", "authenticity_token"=>"VFH5YcK400NApGmiBPa/ml+7auL94IVtvI5YKlWEYlc=", "tmp_pic_id"=>"36", "subjectId"=>"0", "last_r_pic_id"=>"36"}
+  [4;36;1mPic Load (0.2ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."id" = 37) [0m
+  [4;35;1mPic Load (0.1ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."id" = 36) [0m
+  [4;36;1mPic Update (0.2ms)[0m   [0;1mUPDATE "pics" SET "updated_at" = '2012-02-08 15:43:53', "wins" = 7, "scores" = 148 WHERE "id" = 37[0m
+
+SQLite3::BusyException (database is locked):
+  /Users/fishforward/.gem/ruby/1.8/gems/sqlite3-1.3.3/lib/sqlite3/database.rb:97:in `close'
+  /Users/fishforward/.gem/ruby/1.8/gems/sqlite3-1.3.3/lib/sqlite3/database.rb:97:in `prepare'
+  /Users/fishforward/.gem/ruby/1.8/gems/sqlite3-1.3.3/lib/sqlite3/database.rb:134:in `execute'
+  /Users/fishforward/.gem/ruby/1.8/gems/sqlite3-1.3.3/lib/sqlite3/database.rb:507:in `commit'
+  app/models/pic.rb:79:in `record'
+  app/models/pic.rb:58:in `pk'
+  app/controllers/picks_controller.rb:95:in `create'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (28.2ms)
+Rendered rescues/_request_and_response (1.1ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2012-02-08 23:44:09) [GET]
+  [4;35;1mPic Load (0.5ms)[0m   [0mSELECT * FROM "pics" ORDER BY RANDOM() LIMIT 1[0m
+  [4;36;1mPic Load (0.2ms)[0m   [0;1mSELECT * FROM "pics" WHERE (id <> 36) ORDER BY RANDOM() LIMIT 1[0m
+  [4;35;1mPicTag Load (0.1ms)[0m   [0mSELECT * FROM "pic_tags" WHERE ("pic_tags"."pic_id" = 36) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT * FROM "tags" WHERE ("tags"."id" = 41) ORDER BY name desc[0m
+  [4;35;1mPicTag Load (0.1ms)[0m   [0mSELECT * FROM "pic_tags" WHERE ("pic_tags"."pic_id" = 38) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "pics" WHERE (wins > 0 or losses > 0) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "pics" [0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_show (2.9ms)
+Completed in 18ms (View: 6, DB: 1) | 200 OK [http://0.0.0.0/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2012-02-08 23:44:10) [GET]
+  [4;36;1mPic Load (0.5ms)[0m   [0;1mSELECT * FROM "pics" ORDER BY RANDOM() LIMIT 1[0m
+  [4;35;1mPic Load (0.2ms)[0m   [0mSELECT * FROM "pics" WHERE (id <> 37) ORDER BY RANDOM() LIMIT 1[0m
+  [4;36;1mPicTag Load (0.1ms)[0m   [0;1mSELECT * FROM "pic_tags" WHERE ("pic_tags"."pic_id" = 37) [0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT * FROM "tags" WHERE ("tags"."id" = 42) ORDER BY name desc[0m
+  [4;36;1mPicTag Load (0.2ms)[0m   [0;1mSELECT * FROM "pic_tags" WHERE ("pic_tags"."pic_id" = 35) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT * FROM "tags" WHERE ("tags"."id" = 40) ORDER BY name desc[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "pics" WHERE (wins > 0 or losses > 0) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "pics" [0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_show (2.9ms)
+Completed in 18ms (View: 5, DB: 1) | 200 OK [http://0.0.0.0/]
+
+
+Processing PicksController#create (for 127.0.0.1 at 2012-02-08 23:44:12) [POST]
+  Parameters: {"r_pic_id"=>"35", "last_l_pic_id"=>"37", "commit"=>"提 \344\272\244", "l_pic_id"=>"37", "authenticity_token"=>"VFH5YcK400NApGmiBPa/ml+7auL94IVtvI5YKlWEYlc=", "tmp_pic_id"=>"35", "subjectId"=>"0", "last_r_pic_id"=>"35"}
+  [4;36;1mPic Load (0.2ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."id" = 37) [0m
+  [4;35;1mPic Load (0.1ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."id" = 35) [0m
+  [4;36;1mPic Update (0.2ms)[0m   [0;1mUPDATE "pics" SET "updated_at" = '2012-02-08 15:44:12', "wins" = 7, "scores" = 147 WHERE "id" = 37[0m
+  [4;35;1mPic Update (0.2ms)[0m   [0mUPDATE "pics" SET "updated_at" = '2012-02-08 15:44:12', "scores" = 26, "losses" = 21 WHERE "id" = 35[0m
+  [4;36;1mPick Create (0.2ms)[0m   [0;1mINSERT INTO "picks" ("created_at", "loss_pic_id", "updated_at", "subject", "ip", "user", "win_pic_id") VALUES('2012-02-08 15:44:12', '35', '2012-02-08 15:44:12', '0', '127.0.0.1', 'mySelf', '37')[0m
+Redirected to http://0.0.0.0:3000/pick_subjects/0?last_l_pic_id=37&last_r_pic_id=35
+Completed in 22ms (DB: 1) | 302 Found [http://0.0.0.0/picks/create]
+
+
+Processing PickSubjectsController#show (for 127.0.0.1 at 2012-02-08 23:44:12) [GET]
+  Parameters: {"last_l_pic_id"=>"37", "id"=>"0", "last_r_pic_id"=>"35"}
+Redirected to http://0.0.0.0:3000/picks/new?last_l_pic_id=37&last_r_pic_id=35
+Completed in 3ms (DB: 0) | 302 Found [http://0.0.0.0/pick_subjects/0?last_l_pic_id=37&last_r_pic_id=35]
+
+
+Processing PicksController#new (for 127.0.0.1 at 2012-02-08 23:44:12) [GET]
+  Parameters: {"last_l_pic_id"=>"37", "last_r_pic_id"=>"35"}
+  [4;35;1mPic Load (0.5ms)[0m   [0mSELECT * FROM "pics" ORDER BY RANDOM() LIMIT 1[0m
+  [4;36;1mPic Load (0.4ms)[0m   [0;1mSELECT * FROM "pics" WHERE (id <> 36) ORDER BY RANDOM() LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/picks/36_38_?last_l_pic_id=37&last_r_pic_id=35&method=post
+Completed in 7ms (DB: 1) | 302 Found [http://0.0.0.0/picks/new?last_l_pic_id=37&last_r_pic_id=35]
+
+
+Processing PicksController#show (for 127.0.0.1 at 2012-02-08 23:44:12) [GET]
+  Parameters: {"last_l_pic_id"=>"37", "method"=>"post", "id"=>"36_38_", "last_r_pic_id"=>"35"}
+  [4;35;1mPic Load (0.2ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."id" = 37) [0m
+  [4;36;1mPic Load (0.2ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."id" = 35) [0m
+  [4;35;1mPic Load (0.1ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."id" = 36) [0m
+  [4;36;1mPicTag Load (0.1ms)[0m   [0;1mSELECT * FROM "pic_tags" WHERE ("pic_tags"."pic_id" = 36) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT * FROM "tags" WHERE ("tags"."id" = 41) ORDER BY name desc[0m
+  [4;36;1mPic Load (0.1ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."id" = 38) [0m
+  [4;35;1mPicTag Load (0.1ms)[0m   [0mSELECT * FROM "pic_tags" WHERE ("pic_tags"."pic_id" = 38) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "pics" WHERE (wins > 0 or losses > 0) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "pics" [0m
+Rendering template within layouts/application
+Rendering picks/show
+Rendered shared/_tagtext (10.5ms)
+Rendered shared/_tagtext (0.0ms)
+Rendered shared/_show (16.4ms)
+Completed in 106ms (View: 94, DB: 1) | 200 OK [http://0.0.0.0/picks/36_38_?last_l_pic_id=37&last_r_pic_id=35&method=post]
+
+
+Processing PicsController#index (for 127.0.0.1 at 2012-02-08 23:45:30) [GET]
+  [4;36;1mSubject Load (0.4ms)[0m   [0;1mSELECT * FROM "subjects" [0m
+  [4;35;1mPic Load (0.4ms)[0m   [0mSELECT * FROM "pics" WHERE (subject = 1) ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+  [4;36;1mPic Load (0.2ms)[0m   [0;1mSELECT * FROM "pics" WHERE (subject = 2) ORDER BY scores desc LIMIT 10 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering pics/index
+Completed in 14ms (View: 6, DB: 1) | 200 OK [http://0.0.0.0/pics]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2012-02-08 23:45:34) [GET]
+  [4;35;1mPic Load (0.4ms)[0m   [0mSELECT * FROM "pics" ORDER BY RANDOM() LIMIT 1[0m
+  [4;36;1mPic Load (0.2ms)[0m   [0;1mSELECT * FROM "pics" WHERE (id <> 38) ORDER BY RANDOM() LIMIT 1[0m
+  [4;35;1mPicTag Load (0.1ms)[0m   [0mSELECT * FROM "pic_tags" WHERE ("pic_tags"."pic_id" = 38) [0m
+  [4;36;1mPicTag Load (0.1ms)[0m   [0;1mSELECT * FROM "pic_tags" WHERE ("pic_tags"."pic_id" = 37) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT * FROM "tags" WHERE ("tags"."id" = 42) ORDER BY name desc[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "pics" WHERE (wins > 0 or losses > 0) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "pics" [0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_show (2.9ms)
+Completed in 17ms (View: 6, DB: 1) | 200 OK [http://0.0.0.0/]
+
+
+Processing PickSubjectsController#show (for 127.0.0.1 at 2012-02-08 23:45:38) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPic Load (0.2ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."subject" = '1') ORDER BY RANDOM() LIMIT 1[0m
+  [4;35;1mPic Load (0.2ms)[0m   [0mSELECT * FROM "pics" WHERE (id <> 36) AND ("pics"."subject" = '1') ORDER BY RANDOM() LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/picks/36_37_1
+Completed in 6ms (DB: 0) | 302 Found [http://0.0.0.0/pick_subjects/1]
+
+
+Processing PicksController#show (for 127.0.0.1 at 2012-02-08 23:45:38) [GET]
+  Parameters: {"id"=>"36_37_1"}
+  [4;36;1mPic Load (0.3ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."id" = 36) [0m
+  [4;35;1mPicTag Load (0.2ms)[0m   [0mSELECT * FROM "pic_tags" WHERE ("pic_tags"."pic_id" = 36) [0m
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT * FROM "tags" WHERE ("tags"."id" = 41) ORDER BY name desc[0m
+  [4;35;1mPic Load (0.1ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."id" = 37) [0m
+  [4;36;1mPicTag Load (0.1ms)[0m   [0;1mSELECT * FROM "pic_tags" WHERE ("pic_tags"."pic_id" = 37) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT * FROM "tags" WHERE ("tags"."id" = 42) ORDER BY name desc[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "pics" WHERE (wins > 0 or losses > 0) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "pics" [0m
+Rendering template within layouts/application
+Rendering picks/show
+Rendered shared/_show (4.4ms)
+Completed in 23ms (View: 7, DB: 1) | 200 OK [http://0.0.0.0/picks/36_37_1]
+
+
+Processing PickSubjectsController#show (for 127.0.0.1 at 2012-02-08 23:45:41) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPic Load (0.2ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."subject" = '2') ORDER BY RANDOM() LIMIT 1[0m
+  [4;35;1mPic Load (0.2ms)[0m   [0mSELECT * FROM "pics" WHERE (id <> 38) AND ("pics"."subject" = '2') ORDER BY RANDOM() LIMIT 1[0m
+
+RuntimeError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id):
+  app/controllers/pick_subjects_controller.rb:26:in `show'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (22.0ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PickSubjectsController#show (for 127.0.0.1 at 2012-02-08 23:46:29) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPic Load (0.2ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."subject" = '1') ORDER BY RANDOM() LIMIT 1[0m
+  [4;35;1mPic Load (0.2ms)[0m   [0mSELECT * FROM "pics" WHERE (id <> 36) AND ("pics"."subject" = '1') ORDER BY RANDOM() LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/picks/36_37_1
+Completed in 6ms (DB: 0) | 302 Found [http://0.0.0.0/pick_subjects/1]
+
+
+Processing PicksController#show (for 127.0.0.1 at 2012-02-08 23:46:29) [GET]
+  Parameters: {"id"=>"36_37_1"}
+  [4;36;1mPic Load (0.2ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."id" = 36) [0m
+  [4;35;1mPicTag Load (0.3ms)[0m   [0mSELECT * FROM "pic_tags" WHERE ("pic_tags"."pic_id" = 36) [0m
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT * FROM "tags" WHERE ("tags"."id" = 41) ORDER BY name desc[0m
+  [4;35;1mPic Load (0.1ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."id" = 37) [0m
+  [4;36;1mPicTag Load (0.1ms)[0m   [0;1mSELECT * FROM "pic_tags" WHERE ("pic_tags"."pic_id" = 37) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT * FROM "tags" WHERE ("tags"."id" = 42) ORDER BY name desc[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "pics" WHERE (wins > 0 or losses > 0) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "pics" [0m
+Rendering template within layouts/application
+Rendering picks/show
+Rendered shared/_show (4.7ms)
+Completed in 22ms (View: 9, DB: 1) | 200 OK [http://0.0.0.0/picks/36_37_1]
+
+
+Processing PickSubjectsController#show (for 127.0.0.1 at 2012-02-08 23:46:32) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPic Load (0.2ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."subject" = '2') ORDER BY RANDOM() LIMIT 1[0m
+  [4;35;1mPic Load (0.1ms)[0m   [0mSELECT * FROM "pics" WHERE (id <> 38) AND ("pics"."subject" = '2') ORDER BY RANDOM() LIMIT 1[0m
+
+RuntimeError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id):
+  app/controllers/pick_subjects_controller.rb:26:in `show'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (22.4ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PicsController#new (for 127.0.0.1 at 2012-02-08 23:48:49) [GET]
+Rendering template within layouts/application
+Rendering pics/new
+  [4;36;1mSubject Load (0.2ms)[0m   [0;1mSELECT * FROM "subjects" [0m
+Completed in 37ms (View: 32, DB: 0) | 200 OK [http://0.0.0.0/pics/new]
+
+
+Processing PicsController#create (for 127.0.0.1 at 2012-02-08 23:49:31) [POST]
+  Parameters: {"commit"=>"上\344\274\240", "authenticity_token"=>"VFH5YcK400NApGmiBPa/ml+7auL94IVtvI5YKlWEYlc=", "pic"=>{"image_url"=>#<File:/var/folders/l3/011hnc_s32x8sm0vk_xpqyzw0000gn/T/RackMultipart20120208-1402-1azaqh3-0>, "title"=>"b", "subject"=>"2", "tmptags"=>"\350\233\207", "description"=>"", "image_url_temp"=>""}}
+  [4;35;1mPic Create (0.3ms)[0m   [0mINSERT INTO "pics" ("keyname", "created_at", "title", "image_url", "scores", "updated_at", "subject", "wins", "tmptags", "description", "losses") VALUES('1328716171_', '2012-02-08 15:49:31', 'b', '02_login_big02.jpg', 100, '2012-02-08 15:49:31', '2', 0, '蛇', '', 0)[0m
+  [4;36;1mPic Update (0.2ms)[0m   [0;1mUPDATE "pics" SET "updated_at" = '2012-02-08 15:49:31', "keyname" = '1328716171_39.jpg' WHERE "id" = 39[0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT * FROM "tags" WHERE ("tags"."name" = '蛇') LIMIT 1[0m
+  [4;36;1mTag Create (0.2ms)[0m   [0;1mINSERT INTO "tags" ("name", "created_at", "updated_at", "memo", "link") VALUES('蛇', '2012-02-08 15:49:37', '2012-02-08 15:49:37', NULL, NULL)[0m
+  [4;35;1mPicTag Create (0.5ms)[0m   [0mINSERT INTO "pic_tags" ("created_at", "tag_id", "updated_at", "pic_id") VALUES('2012-02-08 15:49:37', 43, '2012-02-08 15:49:37', 39)[0m
+Redirected to http://0.0.0.0:3000/pics/39
+Completed in 5554ms (DB: 1) | 302 Found [http://0.0.0.0/pics]
+
+
+Processing PicsController#show (for 127.0.0.1 at 2012-02-08 23:49:37) [GET]
+  Parameters: {"id"=>"39"}
+  [4;36;1mPic Load (0.2ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."id" = 39) [0m
+  [4;35;1mPicTag Load (0.2ms)[0m   [0mSELECT * FROM "pic_tags" WHERE ("pic_tags"."pic_id" = 39) [0m
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT * FROM "tags" WHERE ("tags"."id" = 43) ORDER BY name desc[0m
+Rendering template within layouts/application
+Rendering pics/show
+Rendered shared/_tagtext (0.7ms)
+Completed in 97ms (View: 85, DB: 1) | 200 OK [http://0.0.0.0/pics/39]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2012-02-08 23:49:40) [GET]
+  [4;35;1mPic Load (0.5ms)[0m   [0mSELECT * FROM "pics" ORDER BY RANDOM() LIMIT 1[0m
+  [4;36;1mPic Load (0.2ms)[0m   [0;1mSELECT * FROM "pics" WHERE (id <> 35) ORDER BY RANDOM() LIMIT 1[0m
+  [4;35;1mPicTag Load (0.1ms)[0m   [0mSELECT * FROM "pic_tags" WHERE ("pic_tags"."pic_id" = 35) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT * FROM "tags" WHERE ("tags"."id" = 40) ORDER BY name desc[0m
+  [4;35;1mPicTag Load (0.1ms)[0m   [0mSELECT * FROM "pic_tags" WHERE ("pic_tags"."pic_id" = 38) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "pics" WHERE (wins > 0 or losses > 0) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "pics" [0m
+Rendering template within layouts/application
+Rendering home/index
+Rendered shared/_show (2.9ms)
+Completed in 17ms (View: 6, DB: 1) | 200 OK [http://0.0.0.0/]
+
+
+Processing PickSubjectsController#show (for 127.0.0.1 at 2012-02-08 23:49:41) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPic Load (0.2ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."subject" = '2') ORDER BY RANDOM() LIMIT 1[0m
+  [4;35;1mPic Load (0.2ms)[0m   [0mSELECT * FROM "pics" WHERE (id <> 39) AND ("pics"."subject" = '2') ORDER BY RANDOM() LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/picks/39_38_2
+Completed in 6ms (DB: 0) | 302 Found [http://0.0.0.0/pick_subjects/2]
+
+
+Processing PicksController#show (for 127.0.0.1 at 2012-02-08 23:49:41) [GET]
+  Parameters: {"id"=>"39_38_2"}
+  [4;36;1mPic Load (0.2ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."id" = 39) [0m
+  [4;35;1mPicTag Load (0.2ms)[0m   [0mSELECT * FROM "pic_tags" WHERE ("pic_tags"."pic_id" = 39) [0m
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT * FROM "tags" WHERE ("tags"."id" = 43) ORDER BY name desc[0m
+  [4;35;1mPic Load (0.2ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."id" = 38) [0m
+  [4;36;1mPicTag Load (0.1ms)[0m   [0;1mSELECT * FROM "pic_tags" WHERE ("pic_tags"."pic_id" = 38) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "pics" WHERE (wins > 0 or losses > 0) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "pics" [0m
+Rendering template within layouts/application
+Rendering picks/show
+Rendered shared/_show (3.2ms)
+Completed in 20ms (View: 6, DB: 1) | 200 OK [http://0.0.0.0/picks/39_38_2]
+
+
+Processing PickSubjectsController#show (for 127.0.0.1 at 2012-02-08 23:49:42) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mPic Load (0.3ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."subject" = '2') ORDER BY RANDOM() LIMIT 1[0m
+  [4;36;1mPic Load (0.2ms)[0m   [0;1mSELECT * FROM "pics" WHERE (id <> 39) AND ("pics"."subject" = '2') ORDER BY RANDOM() LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/picks/39_38_2
+Completed in 8ms (DB: 0) | 302 Found [http://0.0.0.0/pick_subjects/2]
+
+
+Processing PicksController#show (for 127.0.0.1 at 2012-02-08 23:49:42) [GET]
+  Parameters: {"id"=>"39_38_2"}
+  [4;35;1mPic Load (0.1ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."id" = 39) [0m
+  [4;36;1mPicTag Load (0.1ms)[0m   [0;1mSELECT * FROM "pic_tags" WHERE ("pic_tags"."pic_id" = 39) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT * FROM "tags" WHERE ("tags"."id" = 43) ORDER BY name desc[0m
+  [4;36;1mPic Load (0.2ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."id" = 38) [0m
+  [4;35;1mPicTag Load (0.1ms)[0m   [0mSELECT * FROM "pic_tags" WHERE ("pic_tags"."pic_id" = 38) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "pics" WHERE (wins > 0 or losses > 0) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "pics" [0m
+Rendering template within layouts/application
+Rendering picks/show
+Rendered shared/_show (2.8ms)
+Completed in 17ms (View: 5, DB: 1) | 200 OK [http://0.0.0.0/picks/39_38_2]
+
+
+Processing PickSubjectsController#show (for 127.0.0.1 at 2012-02-08 23:49:43) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPic Load (0.2ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."subject" = '2') ORDER BY RANDOM() LIMIT 1[0m
+  [4;35;1mPic Load (0.2ms)[0m   [0mSELECT * FROM "pics" WHERE (id <> 38) AND ("pics"."subject" = '2') ORDER BY RANDOM() LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/picks/38_39_2
+Completed in 6ms (DB: 0) | 302 Found [http://0.0.0.0/pick_subjects/2]
+
+
+Processing PicksController#show (for 127.0.0.1 at 2012-02-08 23:49:43) [GET]
+  Parameters: {"id"=>"38_39_2"}
+  [4;36;1mPic Load (0.1ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."id" = 38) [0m
+  [4;35;1mPicTag Load (0.1ms)[0m   [0mSELECT * FROM "pic_tags" WHERE ("pic_tags"."pic_id" = 38) [0m
+  [4;36;1mPic Load (0.1ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."id" = 39) [0m
+  [4;35;1mPicTag Load (0.1ms)[0m   [0mSELECT * FROM "pic_tags" WHERE ("pic_tags"."pic_id" = 39) [0m
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT * FROM "tags" WHERE ("tags"."id" = 43) ORDER BY name desc[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "pics" WHERE (wins > 0 or losses > 0) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "pics" [0m
+Rendering template within layouts/application
+Rendering picks/show
+Rendered shared/_show (2.9ms)
+Completed in 18ms (View: 6, DB: 1) | 200 OK [http://0.0.0.0/picks/38_39_2]
+
+
+Processing PickSubjectsController#show (for 127.0.0.1 at 2012-02-08 23:49:44) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mPic Load (0.2ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."subject" = '2') ORDER BY RANDOM() LIMIT 1[0m
+  [4;36;1mPic Load (0.3ms)[0m   [0;1mSELECT * FROM "pics" WHERE (id <> 38) AND ("pics"."subject" = '2') ORDER BY RANDOM() LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/picks/38_39_2
+Completed in 6ms (DB: 0) | 302 Found [http://0.0.0.0/pick_subjects/2]
+
+
+Processing PicksController#show (for 127.0.0.1 at 2012-02-08 23:49:44) [GET]
+  Parameters: {"id"=>"38_39_2"}
+  [4;35;1mPic Load (0.2ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."id" = 38) [0m
+  [4;36;1mPicTag Load (0.2ms)[0m   [0;1mSELECT * FROM "pic_tags" WHERE ("pic_tags"."pic_id" = 38) [0m
+  [4;35;1mPic Load (0.2ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."id" = 39) [0m
+  [4;36;1mPicTag Load (0.1ms)[0m   [0;1mSELECT * FROM "pic_tags" WHERE ("pic_tags"."pic_id" = 39) [0m
+  [4;35;1mTag Load (0.2ms)[0m   [0mSELECT * FROM "tags" WHERE ("tags"."id" = 43) ORDER BY name desc[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "pics" WHERE (wins > 0 or losses > 0) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "pics" [0m
+Rendering template within layouts/application
+Rendering picks/show
+Rendered shared/_show (3.9ms)
+Completed in 23ms (View: 7, DB: 1) | 200 OK [http://0.0.0.0/picks/38_39_2]
+
+
+Processing PickSubjectsController#show (for 127.0.0.1 at 2012-02-08 23:49:45) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPic Load (0.2ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."subject" = '2') ORDER BY RANDOM() LIMIT 1[0m
+  [4;35;1mPic Load (0.2ms)[0m   [0mSELECT * FROM "pics" WHERE (id <> 38) AND ("pics"."subject" = '2') ORDER BY RANDOM() LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/picks/38_39_2
+Completed in 6ms (DB: 0) | 302 Found [http://0.0.0.0/pick_subjects/2]
+
+
+Processing PicksController#show (for 127.0.0.1 at 2012-02-08 23:49:45) [GET]
+  Parameters: {"id"=>"38_39_2"}
+  [4;36;1mPic Load (0.1ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."id" = 38) [0m
+  [4;35;1mPicTag Load (0.1ms)[0m   [0mSELECT * FROM "pic_tags" WHERE ("pic_tags"."pic_id" = 38) [0m
+  [4;36;1mPic Load (0.1ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."id" = 39) [0m
+  [4;35;1mPicTag Load (0.1ms)[0m   [0mSELECT * FROM "pic_tags" WHERE ("pic_tags"."pic_id" = 39) [0m
+  [4;36;1mTag Load (0.2ms)[0m   [0;1mSELECT * FROM "tags" WHERE ("tags"."id" = 43) ORDER BY name desc[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "pics" WHERE (wins > 0 or losses > 0) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "pics" [0m
+Rendering template within layouts/application
+Rendering picks/show
+Rendered shared/_show (4.9ms)
+Completed in 20ms (View: 9, DB: 1) | 200 OK [http://0.0.0.0/picks/38_39_2]
+
+
+Processing PicksController#show (for 127.0.0.1 at 2012-02-08 23:49:51) [GET]
+  Parameters: {"id"=>"38_39_3"}
+  [4;35;1mPic Load (0.2ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."id" = 38) [0m
+  [4;36;1mPicTag Load (0.1ms)[0m   [0;1mSELECT * FROM "pic_tags" WHERE ("pic_tags"."pic_id" = 38) [0m
+  [4;35;1mPic Load (0.1ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."id" = 39) [0m
+  [4;36;1mPicTag Load (0.1ms)[0m   [0;1mSELECT * FROM "pic_tags" WHERE ("pic_tags"."pic_id" = 39) [0m
+  [4;35;1mTag Load (0.1ms)[0m   [0mSELECT * FROM "tags" WHERE ("tags"."id" = 43) ORDER BY name desc[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "pics" WHERE (wins > 0 or losses > 0) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "pics" [0m
+Rendering template within layouts/application
+Rendering picks/show
+Rendered shared/_show (3.4ms)
+Completed in 18ms (View: 6, DB: 1) | 200 OK [http://0.0.0.0/picks/38_39_3]
+
+
+Processing PicksController#show (for 127.0.0.1 at 2012-02-08 23:49:55) [GET]
+  Parameters: {"id"=>"38_39_4"}
+  [4;36;1mPic Load (0.2ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."id" = 38) [0m
+  [4;35;1mPicTag Load (0.1ms)[0m   [0mSELECT * FROM "pic_tags" WHERE ("pic_tags"."pic_id" = 38) [0m
+  [4;36;1mPic Load (0.1ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."id" = 39) [0m
+  [4;35;1mPicTag Load (0.1ms)[0m   [0mSELECT * FROM "pic_tags" WHERE ("pic_tags"."pic_id" = 39) [0m
+  [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT * FROM "tags" WHERE ("tags"."id" = 43) ORDER BY name desc[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "pics" WHERE (wins > 0 or losses > 0) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "pics" [0m
+Rendering template within layouts/application
+Rendering picks/show
+Rendered shared/_show (4.8ms)
+Completed in 20ms (View: 9, DB: 1) | 200 OK [http://0.0.0.0/picks/38_39_4]
+
+
+Processing PicksController#create (for 127.0.0.1 at 2012-02-08 23:49:58) [POST]
+  Parameters: {"r_pic_id"=>"39", "last_l_pic_id"=>"38", "commit"=>"提 \344\272\244", "l_pic_id"=>"38", "authenticity_token"=>"VFH5YcK400NApGmiBPa/ml+7auL94IVtvI5YKlWEYlc=", "tmp_pic_id"=>"39", "subjectId"=>"4", "last_r_pic_id"=>"39"}
+  [4;35;1mPic Load (0.2ms)[0m   [0mSELECT * FROM "pics" WHERE ("pics"."id" = 38) [0m
+  [4;36;1mPic Load (0.2ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."id" = 39) [0m
+  [4;35;1mPic Update (0.2ms)[0m   [0mUPDATE "pics" SET "updated_at" = '2012-02-08 15:49:58', "wins" = 1, "scores" = 108 WHERE "id" = 38[0m
+  [4;36;1mPic Update (0.2ms)[0m   [0;1mUPDATE "pics" SET "updated_at" = '2012-02-08 15:49:58', "scores" = 92, "losses" = 1 WHERE "id" = 39[0m
+  [4;35;1mPick Create (0.2ms)[0m   [0mINSERT INTO "picks" ("created_at", "loss_pic_id", "updated_at", "subject", "ip", "user", "win_pic_id") VALUES('2012-02-08 15:49:58', '39', '2012-02-08 15:49:58', '4', '127.0.0.1', 'mySelf', '38')[0m
+Redirected to http://0.0.0.0:3000/pick_subjects/4?last_l_pic_id=38&last_r_pic_id=39
+Completed in 17ms (DB: 1) | 302 Found [http://0.0.0.0/picks/create]
+
+
+Processing PickSubjectsController#show (for 127.0.0.1 at 2012-02-08 23:49:58) [GET]
+  Parameters: {"last_l_pic_id"=>"38", "id"=>"4", "last_r_pic_id"=>"39"}
+  [4;36;1mPic Load (0.3ms)[0m   [0;1mSELECT * FROM "pics" WHERE ("pics"."subject" = '4') ORDER BY RANDOM() LIMIT 1[0m
+
+ActionView::MissingTemplate (Missing template pick_subjects/show.erb in view path app/views):
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)

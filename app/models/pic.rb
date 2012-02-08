@@ -44,8 +44,9 @@ class Pic < ActiveRecord::Base
    #end
    
    
-   def self.search(page)  
-    paginate :per_page => 10, :page => page,  
+   def self.search(page,subject)  
+    paginate :conditions =>["subject = ?", subject],
+             :per_page => 10, :page => page, 
              :order => 'scores desc'  
    end 
    

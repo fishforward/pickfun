@@ -15,8 +15,9 @@
 					    <a><%= image_tag(FILE_PATH_PRE + @l_pic.keyname + MIDDLE_PIC, :id => "lpic", :class=>"image_wrapper fl_image") %></a>
 						<br>
 						<% if(@last_l_pic) %>
+						
 					    <div class="popular">
-					 		<ul>
+					 		<ul>上一轮
 								<li>scores
 									<dl class="meta">
 										<dd><a href="#"><%= @last_l_pic.scores.ceil %> </a></dd>
@@ -49,8 +50,9 @@
 						<a><%= image_tag(FILE_PATH_PRE + @r_pic.keyname + MIDDLE_PIC, :id => "rpic", :class=>"image_wrapper fl_image" ) %></a>
 					    <br>
 					    <% if(@last_r_pic) %>
+					    
 						<div class="popular">
-							<ul>
+							<ul>上一轮
 								<li>scores
 									<dl class="meta">
 										 <dd><a href="#"><%= @last_r_pic.scores.ceil %> </a></dd>

@@ -1,7 +1,8 @@
 <div class="section">
 	<ul class="news">
+		<% @pics.keys.each do |sub| %>
 		<li>
-			<h2><a href="#">Pick  Rank</a></h2>
+			<h2><a href="#"><%= sub.name %></a></h2>
 			
 			<div class="tweetmeme_button">
 				<div class="tweetmemebutton">
@@ -13,7 +14,7 @@
 			<div class="section">
 				<ul class="ads big">
 					
-					<% @pics.each_with_index do |pic,i| %>
+					<% @pics[sub].each_with_index do |pic,i| %>
 					<% @pic = pic %>
 					<% if i % 2 == 0 %>
 					<li>
@@ -78,8 +79,11 @@
 				
 			</div>
 			<div class="section">
-				<%= will_paginate @pics %>
+				<!--<%= will_paginate @pics[sub] %>
+				-->
 			</div>
 		</li>
+		&nbsp;
+		<% end %>
 	</ul>
 </div>
