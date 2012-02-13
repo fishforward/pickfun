@@ -1,30 +1,126 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><!-- InstanceBegin template="/Templates/base.dwt" codeOutsideHTMLIsLocked="false" -->
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
 <head>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-  <title>We're sorry, but something went wrong (500)</title>
-	<style type="text/css">
-		body { background-color: #fff; color: #666; text-align: center; font-family: arial, sans-serif; }
-		div.dialog {
-			width: 25em;
-			padding: 0 4em;
-			margin: 4em auto 0 auto;
-			border: 1px solid #ccc;
-			border-right-color: #999;
-			border-bottom-color: #999;
-		}
-		h1 { font-size: 100%; color: #f00; line-height: 1.5em; }
-	</style>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Pick Fun</title>
+	<!-- InstanceBeginEditable name="head" -->
+	<meta name="keywords" content="Pick Pic & Pick Fun" />
+	<meta name="description" content="图片选择比较，排行" />
+	<%= javascript_include_tag "js/jquery.js", "js/creato.js" %>
+	<%= stylesheet_link_tag 'pickpic.css', :media => 'screen' %>
 </head>
 
 <body>
-  <!-- This file lives in public/500.html -->
-  <div class="dialog">
-    <h1>We're sorry, but something went wrong.</h1>
-    <p>We've been notified about this issue and we'll take a look at it shortly.</p>
-  </div>
+	
+<div id="wrapper">
+
+		<!-- HEADER START -->
+		<div id="header">
+		
+			<h1><%= link_to "Pick Pic Fun", :controller => "home" %></h1>
+			
+			<ul id="nav">
+					<li class="current">
+					<%= link_to "Home", :controller => "home" %>
+     				</li>
+				    <li>
+					<%= link_to "Pics", :controller => "pics" %>
+     				</li>
+				
+				    <li>
+					<%= link_to "Upload",  :controller => "pics", :action => "new" %>
+    				</li>
+				    <li>
+					<%= link_to "About", :controller => "about", :action => "message" %>
+    				</li>
+			</ul>
+		
+		</div><!-- end div #header -->
+		<!-- HEADER END -->
+		
+		<!-- CONTENT START -->
+		<div id="container">
+			<div id="content"> 
+				 <section class="round2">
+
+					<div class="section">
+						<ul class="news">
+							<li>
+								<br><br><br>
+								<p>
+									呃^_@...系统Hold不住啦，请稍后再试呗<br>
+									
+									<span id="tiao"></span>秒后自动跳转到首页<script language="javascript" type="text/javascript">countDown(5,'http://fun.pickpic.dotcloud.com');</script><br />
+								</p>
+								<br><br><br>
+							</li>
+						</ul>
+						
+					</div>
+
+				</section>
+			</div><!-- end div #content -->
+			
+		</div><!-- end div #container -->
+		<!-- CONTENT END -->
+		
+		<!-- FOOTER START -->
+		<div id="footer-wrap">
+			<div id="footer">
+
+				<!-- Footer first level - start -->
+				<ul>
+					
+					<li class="col-1">
+						<h2>Categories</h2>
+						<ul>
+							<li><a href="#"><strong>Home</strong></a>, <a href="#">Pick</a></li>
+							<li><a href="#"><strong>Pic</strong></a>, <a href="#">Rank</a></li>
+							<li><a href="#"><strong>Upload</strong></a></li>
+						</ul>
+					</li>
+					<li class="col-2">
+						<h2>Todo</h2>
+						<ul>
+							<li><a href="#">Connect to Social</a></li>
+							<li><a href="#">Tag</a></li>
+							<li><a href="#">Pick Of Theme</a></li>
+						</ul>
+					</li>
+					<li class="col-3">
+						<h2>About me</h2>
+						<dl>
+							<dt><a href="#">John Example - Go to about page</a></dt>
+							<dd>For the ideal that I hold dear to my heart.</dd>
+						</dl>
+					</li>
+				</ul>
+				<!-- Footer first level - end -->
+				<!-- Footer second level - start -->
+				<p>&copy; 2011 费仕. All rights reserved. &nbsp; <a href="">E-mail me</a>.</p> 
+				<p class="back-to-top"><a href="#">Back to top</a></p>
+				<!-- Footer second level - end -->
+			</div><!-- end div #footer-wrap -->
+		</div><!-- end div #footer -->
+		<!-- FOOTER END -->
+	
+	</div><!-- end div #wrapper -->
+
 </body>
+
+<script language="javascript">
+function countDown(secs,surl){
+tiao.innerText=secs;      //<span>中显示的内容值，显示变化的倒计时时间
+if(--secs>0){
+      setTimeout("countDown("+secs+",'"+surl+"')",1000);//设定超时时间
+      }
+else{
+  
+      location.href=surl;//跳转页面
+      } 
+}
+</script>
+
 </html>

@@ -9,11 +9,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111224124508) do
+ActiveRecord::Schema.define(:version => 20120211131931) do
 
   create_table "pic_tags", :force => true do |t|
     t.string   "pic_id"
     t.string   "tag_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "picconnects", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -34,10 +39,14 @@ ActiveRecord::Schema.define(:version => 20111224124508) do
     t.string   "title"
     t.string   "description"
     t.string   "image_url"
+    t.string   "original_pic"
+    t.string   "bmiddle_pic"
+    t.string   "thumbnail_pic"
     t.integer  "scores"
     t.integer  "wins"
     t.integer  "losses"
     t.string   "tmptags"
+    t.string   "source"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

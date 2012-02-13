@@ -1,0 +1,51 @@
+<div class="section">
+	<ul class="news">
+		<% form_tag "/picconnects/create", :id => 'form' do -%>
+			<% @picconnects.each_with_index do |p,i| %>
+			<li>
+				<% if i==0 %>
+					<h2><a href="#">connect & import</a></h2>
+				<% end %>
+				<div class="tweetmeme_button">
+					<div class="tweetmemebutton">
+						<a class="count" href="#" title="Failure: Invalid Story URL specified"><span class="c"></span><br/><span class="t"></span></a>
+						<!--<a class="retweet" title="" href="#">retweet</a>-->
+				  </div>
+				</div>
+				
+				<input id=<%= "pic_choose"+ p.id.to_s %> name='pic_choose[]' type="checkbox" value='1' />
+				<input id=<%= "pid" %> name='pid[]' type="hidden" value=<%= p.id %> />
+				<div class="section">
+					<ul class="ads big">
+						<li>
+						    <% if(p.bmiddle_pic && p.original_pic ) %>
+					  			<%= link_to image_tag(p.thumbnail_pic), p.original_pic %>
+					  		<% end %>
+							<br>
+						    <div class="popular">
+						 		<ul>
+									<li><%=h p.text %>
+									</li>
+									 
+								</ul>
+								<ul> 
+									<dl class="meta">
+											<dd><%= p.created_at %></dd>
+										</dl>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<hr>
+			<input id=<%= "original_pic"+ p.id.to_s %> name="original_pic[]" value=<%= p.original_pic %> type="hidden" />
+			<input id=<%= "bmiddle_pic"+ p.id.to_s %> name="bmiddle_pic[]" value=<%= p.bmiddle_pic %> type="hidden" />
+			<input id=<%= "thumbnail_pic"+ p.id.to_s %> name="thumbnail_pic[]" value=<%= p.thumbnail_pic %> type="hidden" />
+			<input id=<%= "description"+ p.id.to_s %> name="description[]" value=<%= p.text %> type="hidden" />
+			<% end %>
+			
+			<%= submit_tag "提交", :class => "submit" %>
+		<% end %>
+	</ul>
+</div>

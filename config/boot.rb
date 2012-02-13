@@ -2,7 +2,7 @@
 # Configure your app in config/environment.rb and config/environments/*.rb
 require 'yaml'
 #～～～～～#本地启动，这一行要注释掉
-YAML::ENGINE.yamler= 'syck'
+#YAML::ENGINE.yamler= 'syck'
 
 RAILS_ROOT = "#{File.dirname(__FILE__)}/.." unless defined?(RAILS_ROOT)
 

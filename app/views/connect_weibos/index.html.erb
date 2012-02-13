@@ -1,0 +1,8 @@
+<h1>Listing connect_weibos</h1>
+
+
+<% if session[:atoken] %>
+	<%= link_to 'connect_weibo', :controller => 'connect_weibos', :action => 'connect' %>
+<% else %>
+	<%= link_to 'connect_weibo', :action => 'connect' %>
+<% end %>

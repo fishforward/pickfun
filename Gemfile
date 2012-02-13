@@ -4,3 +4,9 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'mislav-will_paginate', '~>2.1'
 gem "rmagick"
 gem 'rest-client'
+source :gemcutter
+gem "sinatra"
+gem "haml"
+gem "oauth"
+gem "json"
+gem "weibo"

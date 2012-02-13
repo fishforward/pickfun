@@ -8,6 +8,7 @@
 	<!-- InstanceBeginEditable name="head" -->
 	<meta name="keywords" content="Pick Pic & Pick Fun" />
 	<meta name="description" content="图片选择比较，排行" />
+	<meta property="wb:webmaster" content="944220214aa883f9" />
 	<%= javascript_include_tag "js/jquery.js", "js/creato.js" %>
 	<%= stylesheet_link_tag 'pickpic.css', :media => 'screen' %>
 </head>
@@ -65,6 +66,25 @@
 						
 					</ul> 
 				</li>
+				
+				<% if session[:aid] %>
+					<li>
+						<font color="gray" size="1">
+							<i>
+								<%= session[:aname] %>的账号 
+							</i>
+						</font>
+					</li>
+					<li>
+						<%= link_to 'logout', :controller => 'connect_weibos', :action => 'logout' %>
+					</li>
+				<% else %>
+					<li>
+						<font color="gray" size="1">
+							<i><%= link_to 'login', :controller => 'connect_weibos', :action => 'connect' %> </i>
+						</font>
+					</li>
+				<% end %>
 			</ul>
 		
 		</div><!-- end div #header -->

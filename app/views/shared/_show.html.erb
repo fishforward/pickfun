@@ -12,7 +12,7 @@
 			<div class="section">
 				<ul class="ads big">
 					<li>
-					    <a><%= image_tag(FILE_PATH_PRE + @l_pic.keyname + MIDDLE_PIC, :id => "lpic", :class=>"image_wrapper fl_image") %></a>
+					    <a><%= image_tag( @l_pic.bmiddle_pic, :id => "lpic", :class=>"image_wrapper fl_image") %></a>
 						<br>
 						<% if(@last_l_pic) %>
 						
@@ -47,7 +47,7 @@
 						<% end %>
 					</li>
 					<li>
-						<a><%= image_tag(FILE_PATH_PRE + @r_pic.keyname + MIDDLE_PIC, :id => "rpic", :class=>"image_wrapper fl_image" ) %></a>
+						<a><%= image_tag( @r_pic.bmiddle_pic, :id => "rpic", :class=>"image_wrapper fl_image" ) %></a>
 					    <br>
 					    <% if(@last_r_pic) %>
 					    

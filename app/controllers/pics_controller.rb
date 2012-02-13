@@ -69,12 +69,17 @@ class PicsController < ApplicationController
     @pic.scores = 100
     @pic.wins = 0
     @pic.losses = 0
+    @pic.source = 'local'
     
     respond_to do |format|
       if @pic.save
         
         extname =File.extname(@pic.image_url)
         @pic.keyname=@pic.keyname + @pic.id.to_s + extname
+        @pic.original_pic = FILE_PATH_PRE + @pic.keyname
+        @pic.bmiddle_pic = FILE_PATH_PRE + @pic.keyname + BIG_PIC
+        @pic.thumbnail_pic = FILE_PATH_PRE + @pic.keyname + MIDDLE_PIC
+        
         @pic.save
         
         UpYun.new().upload(@pic.image_url,@pic.keyname)

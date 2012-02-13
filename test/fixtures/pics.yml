@@ -4,7 +4,7 @@ one:
   keyname: MyString
   title: MyString
   description: MyString
-  image_url: MyString
+  original_pic: MyString
   scores: 1
   wins: 1
   losses: 1
@@ -13,7 +13,7 @@ two:
   keyname: MyString
   title: MyString
   description: MyString
-  image_url: MyString
+  original_pic: MyString
   scores: 1
   wins: 1
   losses: 1

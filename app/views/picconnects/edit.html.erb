@@ -1,0 +1,12 @@
+<h1>Editing picconnect</h1>
+
+<% form_for(@picconnect) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @picconnect %> |
+<%= link_to 'Back', picconnects_path %>

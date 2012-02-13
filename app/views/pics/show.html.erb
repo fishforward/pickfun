@@ -5,7 +5,7 @@
 			<div class="section">
 				<ul class="ads large">
 					<li>
-					    <%= link_to image_tag(FILE_PATH_PRE + @pic.keyname + BIG_PIC), :controller => "pics", :action => "show", :id => @pic.id %>
+					    <%= link_to image_tag( @pic.original_pic ), :controller => "pics", :action => "show", :id => @pic.id %>
 						<br>
 					    <div class="popular">
 					 		<ul>
