@@ -16,7 +16,15 @@ class Pic < ActiveRecord::Base
   file_column :image_url, 
               :root_path =>  "public",
               :web_root => ""
-              
+  
+  def self.insertByImport(pic)
+    time = Time.new.strftime('%Y-%m-%d %H:%M:%S')
+    
+    sql = "insert into pics(keyname,subject,title,description,image_url,original_pic,bmiddle_pic,thumbnail_pic,scores,wins,losses,tmptags,source,created_at,updated_at) 
+           values('#{pic.keyname}','#{pic.subject}','#{pic.title}','#{pic.description}','#{pic.image_url}','#{pic.original_pic}','#{pic.bmiddle_pic}','#{pic.thumbnail_pic}','#{pic.scores}','#{pic.wins}','#{pic.losses}','#{pic.tmptags}','#{pic.source}','#{time}','#{time}')"
+           
+    ActiveRecord::Base.connection.execute(sql);
+  end
               
   # 根据pic获取tags
   def setTags(picId)

@@ -3,7 +3,7 @@ class CreatePics < ActiveRecord::Migration
     create_table :pics do |t|
       t.string :keyname
       t.string :subject
-      t.string :title
+      t.string :title         #后面去掉好了，sina导入图片没用这个字段
       t.string :description
       t.string :image_url     #上传时使用，图片原名称
       t.string :original_pic  #原图

@@ -35,16 +35,37 @@ class PicconnectsController < ApplicationController
   # POST /picconnects.xml
   def create
     
-    puts params.inspect
+    nums = params[:num]
     pic_chooses = params[:pic_choose]
-    pic_chooses.each do |pid|
-      original_pic_v = 'original_pic' + pid
-      original_pic = params[original_pic_v]
-      puts original_pic
+    original_pics = params[:original_pic]
+    bmiddle_pics = params[:bmiddle_pic]
+    thumbnail_pics = params[:thumbnail_pic]
+    descriptions = params[:description]
+    
+    subjects = params[:pic_s]
+    
+    pic_chooses.each_with_index do |pid,i|
+      num = nums[i].to_i
+            
+      newpic = Pic.new
+      newpic.keyname = pic_chooses[i]  ##存的是weibo的id号
+      puts "===="+subjects[num].to_s
+      newpic.subject = (subjects[num]!=nil && subjects[num]!='') ? subjects[num] : 'default'
+      newpic.title = 'default'
+      newpic.description = descriptions[i]
+      newpic.original_pic = original_pics[i]
+      newpic.bmiddle_pic = bmiddle_pics[i]
+      newpic.thumbnail_pic = thumbnail_pics[i]
+      newpic.scores = 100
+      newpic.wins = 0
+      newpic.losses = 0
+      newpic.source = 'weibo'
+      
+      Pic.insertByImport(newpic)
     end
     
     respond_to do |format|
-      format.html { redirect_to :action => "picconnects" }
+      format.html { redirect_to :controller => "pics" }
     end
   end
   

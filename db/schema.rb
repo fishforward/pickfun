@@ -9,7 +9,41 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120211131931) do
+ActiveRecord::Schema.define(:version => 20120226134911) do
+
+  create_table "oauths", :force => true do |t|
+    t.string   "uuid"
+    t.string   "app"
+    t.string   "key_id"
+    t.string   "name"
+    t.string   "name2"
+    t.string   "memo"
+    t.string   "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "people", :force => true do |t|
+    t.string   "longin"
+    t.string   "email"
+    t.string   "name"
+    t.string   "remember_token"
+    t.string   "crypted_password"
+    t.string   "salt"
+    t.text     "description"
+    t.datetime "remember_token_expires_at"
+    t.datetime "last_contacted_at"
+    t.datetime "last_logged_in_at"
+    t.integer  "pics_count",                :default => 0, :null => false
+    t.integer  "picks_count",               :default => 0, :null => false
+    t.string   "email_verified"
+    t.string   "avatar"
+    t.string   "status"
+    t.string   "admin"
+    t.string   "email_verified_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "pic_tags", :force => true do |t|
     t.string   "pic_id"
