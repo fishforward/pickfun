@@ -33,11 +33,11 @@ class HomeController < ApplicationController
     
     # 菜单标签配置
     @Home_current = true;
-    @Home_secode = @subjectId
+    @SubjectId = @subjectId
     
     respond_to do |format|
       format.html # new.html.erb
-      format.xml  { render :xml => @l_pic | @r_pic | @pickPercentage | @picSum | @Home_current | @subjectId | @Home_secode }
+      format.xml  { render :xml => @l_pic | @r_pic | @pickPercentage | @picSum | @Home_current | @subjectId | @SubjectId }
     end
     
   end

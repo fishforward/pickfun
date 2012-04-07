@@ -1,0 +1,133 @@
+<div class="section">
+	<ul class="news">
+		<li>
+			<h2><a href="#">PICK  PIC</a></h2>
+			
+			<div class="ingore_pick_mid">
+  				<%= link_to "Next", {:controller => "pick_subjects",:action =>"show", :id => @subjectId } , :class => "retweet" %> 
+			</div>
+			
+			<p>&nbsp;</p>
+			
+			<div class="section">
+				<ul class="ads big">
+					<li>
+					    <a><%= image_tag( @l_pic.bmiddle_pic, :id => "lpic", :class=>"image_wrapper fl_image") %></a>
+						<br>
+						<% if(@last_l_pic) %>
+						
+					    <div class="popular">
+					 		<ul>上一轮
+								<li>scores
+									<dl class="meta">
+										<dd><a href="#"><%= @last_l_pic.scores.ceil %> </a></dd>
+									</dl>
+								</li>
+								<li>wins
+									<dl class="meta">
+										<dd><a href="#"><%= @last_l_pic.wins %> </a></dd>
+									</dl>
+								</li>
+								<li>losses
+									<dl class="meta">
+										<dd><a href="#"><%= @last_l_pic.losses %> </a></dd>
+									</dl>
+								</li>
+								<li>tags
+									<dl class="meta">
+										<dd>
+											<% @pic = @last_l_pic %>
+											<%= render :partial => "shared/tagtext",  :locals => {:pic => @pic } %> 
+										</dd>
+									</dl>
+								</li>
+							</ul>
+							<p><a href="#">See history pick</a></p>
+						</div>
+						<% end %>
+					</li>
+					<li>
+						<a><%= image_tag( @r_pic.bmiddle_pic, :id => "rpic", :class=>"image_wrapper fl_image" ) %></a>
+					    <br>
+					    <% if(@last_r_pic) %>
+					    
+						<div class="popular">
+							<ul>上一轮
+								<li>scores
+									<dl class="meta">
+										 <dd><a href="#"><%= @last_r_pic.scores.ceil %> </a></dd>
+									</dl>
+								</li>
+								<li>wins
+									<dl class="meta">
+										 <dd><a href="#"><%= @last_r_pic.wins %> </a></dd>
+									</dl>
+								</li>
+								<li>losses
+									<dl class="meta">
+										<!--<dt class="comments">Comments</dt>-->
+										 <dd><a href="#"><%= @last_r_pic.losses %> </a></dd>
+									</dl>
+								</li>
+								<li>tags
+									<dl class="meta">
+										<dd>
+											<% @pic = @last_r_pic %>
+											<%= render :partial => "shared/tagtext",  :locals => {:pic => @pic } %> 
+										</dd>
+									</dl>
+								</li>
+							</ul>
+							<p><a href="#">See history pick</a></p>
+						</div>	
+						<% end %>	
+					</li>
+				</ul>
+				
+			</div>
+			
+		</li>
+	</ul>
+</div>
+
+<div class="section"> 
+	<h2>&nbsp;</h2>
+	<ul class="news">
+		
+		<!-- Post Content - start -->
+		<li>
+			<h2><a href="#">to be continued...</a></h2><!-- Title -->
+		</li>
+	</ul>
+	<!-- Pagination - end -->
+</div>
+
+<% form_tag "/picks/create", :id => 'form' do -%>
+  
+<div>
+	<input id="last_l_pic_id" name="last_l_pic_id" value=<%= @l_pic.id %> type="hidden" />
+	<input id="last_r_pic_id" name="last_r_pic_id" value=<%= @r_pic.id %> type="hidden" />
+	<input id="l_pic_id" name="l_pic_id" value=<%= @l_pic.id %> type="hidden" />
+	<input id="r_pic_id" name="r_pic_id" value=<%= @r_pic.id %> type="hidden" />
+	<input id="tmp_pic_id" name="tmp_pic_id" value=<%= @r_pic.id %> type="hidden" />
+	<input id="subjectId" name="subjectId" type="hidden" value=<%= @subjectId+'' %> />
+</div>
+
+<%= submit_tag "提 交", :class => "submit", :type =>"hidden" %>
+
+<% end %>
+
+ <script language="JavaScript" type="text/JavaScript">
+
+ 	lpic.onclick = function(){
+ 		form.submit();
+	}
+	rpic.onclick = function(){
+	//	alert("r");
+		document.getElementById('tmp_pic_id').value = document.getElementById('r_pic_id').value;
+	 	document.getElementById('r_pic_id').value = document.getElementById('l_pic_id').value;
+	 	document.getElementById('l_pic_id').value = document.getElementById('tmp_pic_id').value;
+		form.submit();
+	}
+
+ </script>

@@ -1,89 +1,87 @@
-<div class="section">
-	<ul class="news">
-		<% @pics.keys.each do |sub| %>
-		<li>
-			<h2><a href="#"><%= sub.name %></a></h2>
-			
-			<div class="tweetmeme_button">
-				<div class="tweetmemebutton">
-					<a class="count" href="#" title="Failure: Invalid Story URL specified"><span class="c">.</span><br/><span class="t">.</span></a>
-					<!--<a class="retweet" title="" href="#">retweet</a>-->
-			  </div>
-			</div>
-			
-			<div class="section">
-				<ul class="ads big">
-					
-					<% @pics[sub].each_with_index do |pic,i| %>
-					<% @pic = pic %>
-					<% if i % 2 == 0 %>
-					<li>
-					    <%= link_to image_tag( @pic.bmiddle_pic ), :controller => "pics", :action => "show", :id => pic.id %>
-						<br>
-					    <div class="popular">
-					 		<ul>
-								<li>scores
-									<dl class="meta">
-										<dd><a href="#"><%= @pic.scores.ceil %> </a></dd>
-									</dl>
-								</li>
-								<li>wins
-									<dl class="meta">
-										<dd><a href="#"><%= @pic.wins %> </a></dd>
-									</dl>
-								</li>
-								<li>losses
-									<dl class="meta">
-										<dd><a href="#"><%= @pic.losses %> </a></dd>
-									</dl>
-								</li>
-							</ul>
-							<p>
-								<a href="#">See history pick</a>
-							</p>
-						</div>
-					</li>
-					<% else %>
-					<li>
-						<%= link_to image_tag( @pic.bmiddle_pic ), :controller => "pics", :action => "show", :id => pic.id %>
-					    <br>
-						<div class="popular">
-							<ul>
-								<li>scores
-									<dl class="meta">
-										 <dd><a href="#"><%= @pic.scores.ceil %> </a></dd>
-									</dl>
-								</li>
-								<li>wins
-									<dl class="meta">
-										 <dd><a href="#"><%= @pic.wins %> </a></dd>
-									</dl>
-								</li>
-								<li>losses
-									<dl class="meta">
-										<!--<dt class="comments">Comments</dt>-->
-										 <dd><a href="#"><%= @pic.losses %> </a></dd>
-									</dl>
-								</li>
-							</ul>
-							<p>
-								<a href="#">See history pick</a>
-							</p>
-						</div>		
-					</li>
-				  <% end %>
-				  <% end %>
-				</ul>
+<div class="row">
+    	<div class="span10 offset1">
+    	<!-- Masthead 
+    	================================================== -->
+			<header class="jumbotron subhead" id="overview">
+				<div class="row">
+					<div class="span2">
+					  <h1>Pics Range</h1>
+					  <p class="lead"></p>
+					</div>
+				</div>
 				
-				<p>&nbsp;</p>
+			</header>
+    	
+	    	<div class="row">
+		    	<div class="span6">
+					  <div class="subnav">
+					    <ul class="nav nav-tabs">
+					      <li <% if (@SubjectId == nil || @SubjectId == 0) %> class="active" <%end%> > <%= link_to "全部", :controller => "pics",:action => "index" %></li>
+					      <li <% if @SubjectId == '1' %> class="active" <%end%> > <%= link_to "美女", :controller => "pics",:action => "index", :subjectId => '1' %></li>
+					      <li <% if @SubjectId == '2' %> class="active" <%end%> > <%= link_to "风景", :controller => "pics",:action => "index", :subjectId => '2' %></li>
+					      <li><a href="#" data-toggle="tab">搞笑</a></li>
+					      <li><a href="#" data-toggle="tab">更多...</a></li>
+					    </ul>
+					  </div>
+				 </div>
+			</div>
 				
-			</div>
-			<div class="section">
-				<!--<%= will_paginate @pics[sub] %>
-				-->
-			</div>
-		</li>
-		&nbsp;
-		<% end %>
-	</ul>
-</div>
+			
+			
+	    	<div id="flow_container"> 
+	    	  <% if(@pics == nil) %>
+	    	  	未找到展示的图片哦～
+	    	  <% else %>
+	    		<% @pics.each do |pic| %>
+		  		<div class="item">
+		  			<div class="thumbnail">
+		  				 <%= link_to image_tag( pic.bmiddle_pic ), pic, :class => "thumbnail", :style =>"border: 1px #ddd;" %>
+		  				<div class="caption">
+			               <table class="table table-striped table-condensed">
+						        <thead>
+						          <tr>
+						           
+						            <th class="yellow">scores</th>
+						            <td class="blue"><%= pic.scores.ceil %></td>
+						            
+						          </tr>
+						        </thead>
+						        <tbody>
+						          <tr>
+						          
+						            <th>wins</th>
+						            <td><%= pic.wins %></td>
+						        
+						          </tr>
+						          <tr>
+						           
+						            <th>losses</th>
+						            <td><%= pic.losses %></td>
+						          
+						          </tr>
+						          <tr>
+						      
+						            <th>tags</th>
+						            <td>
+										<%= render :partial => "shared/tagtext",  :locals => {:pic => pic } %> 
+						            </td>
+						         
+						          </tr>
+						          <tr>
+						           
+						            <th></th>
+						            <td>See history pick</td>
+						         
+						          </tr>
+						        </tbody>
+						      </table>
+			            </div>
+		  			</div>
+		  		</div>
+		  		<% end %>
+		  	  <% end %>
+		  	</div>
+		  	
+	  	
+		</div><!-- span10 -->
+</div><!-- row -->

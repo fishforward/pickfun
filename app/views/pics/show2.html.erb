@@ -1,0 +1,48 @@
+<div class="section">
+	<ul class="news">
+		<li>
+			<h2><a href="#">PIC</a></h2>
+			<div class="section">
+				<ul class="ads large">
+					<li>
+					    <%= link_to image_tag( @pic.original_pic ), :controller => "pics", :action => "show", :id => @pic.id %>
+						<br>
+					    <div class="popular">
+					 		<ul>
+								<li>scores
+									<dl class="meta">
+										<dt class="comments">Comments</dt> <dd><%= @pic.scores.ceil %> </dd>
+									</dl>
+								</li>
+								<li>wins
+									<dl class="meta">
+										<dt class="comments">Comments</dt> <dd><%= @pic.wins %> </dd>
+									</dl>
+								</li>
+								<li>losses
+									<dl class="meta">
+										<dt class="comments">Comments</dt> <dd><%= @pic.losses %> </dd>
+									</dl>
+								</li>
+								<li>tags
+									<dl class="meta">
+										<dt class="comments"></dt> 
+										<dd align="right" >
+											<%= render :partial => "shared/tagtext",  :locals => {:pic => @pic } %> 
+										</dd>
+									</dl>
+								</li>
+							</ul>
+							<p><a href="#">See history pick</a></p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+</div>
+
+<!-- 
+
+<%= link_to 'Edit', edit_pic_path(@pic) %> |
+<%= link_to 'Back', pics_path %> -->

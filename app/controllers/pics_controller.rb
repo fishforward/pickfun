@@ -6,14 +6,23 @@ class PicsController < ApplicationController
   # GET /pics.xml
   def index
     
-    @pics = Hash.new
-    Subject.all.each do |s,i|
-      @pics[s] = (Pic.search(params[:page],s.id))
+    subjectId = params[:subjectId]
+    puts subjectId
+    
+    if(subjectId)
+      subject = Subject.find(subjectId)
+      if(subject)
+        @pics = Pic.find_all_by_subject(subjectId)
+      end
+    else
+      @pics = Pic.all
     end
     
     # 菜单标签配置
     @Pics_current = true;
-     
+    @SubjectId = subjectId
+    puts @pics.inspect
+    
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @pics }

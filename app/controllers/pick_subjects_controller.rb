@@ -22,7 +22,7 @@ class PickSubjectsController < ApplicationController
         
         # 菜单标签配置
         @Home_current = true;
-        @Home_secode = subjectId
+        @SubjectId = subjectId
         pickId = @l_pic.id.to_s + "_" + @r_pic.id.to_s
         pickId = pickId + "_" + subjectId
         

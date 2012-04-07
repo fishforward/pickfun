@@ -1,121 +1,200 @@
-<div class="section">
-	<ul class="news">
-		<li>
-			<h2><a href="#">PICK  PIC</a></h2>
-			
-			<div class="ingore_pick_mid">
-  				<%= link_to "Next", {:controller => "pick_subjects",:action =>"show", :id => @subjectId } , :class => "retweet" %> 
-			</div>
-			
-			<p>&nbsp;</p>
-			
-			<div class="section">
-				<ul class="ads big">
-					<li>
-					    <a><%= image_tag( @l_pic.bmiddle_pic, :id => "lpic", :class=>"image_wrapper fl_image") %></a>
-						<br>
-						<% if(@last_l_pic) %>
-						
-					    <div class="popular">
-					 		<ul>上一轮
-								<li>scores
-									<dl class="meta">
-										<dd><a href="#"><%= @last_l_pic.scores.ceil %> </a></dd>
-									</dl>
-								</li>
-								<li>wins
-									<dl class="meta">
-										<dd><a href="#"><%= @last_l_pic.wins %> </a></dd>
-									</dl>
-								</li>
-								<li>losses
-									<dl class="meta">
-										<dd><a href="#"><%= @last_l_pic.losses %> </a></dd>
-									</dl>
-								</li>
-								<li>tags
-									<dl class="meta">
-										<dd>
-											<% @pic = @last_l_pic %>
-											<%= render :partial => "shared/tagtext",  :locals => {:pic => @pic } %> 
-										</dd>
-									</dl>
-								</li>
-							</ul>
-							<p><a href="#">See history pick</a></p>
-						</div>
-						<% end %>
-					</li>
-					<li>
-						<a><%= image_tag( @r_pic.bmiddle_pic, :id => "rpic", :class=>"image_wrapper fl_image" ) %></a>
-					    <br>
-					    <% if(@last_r_pic) %>
-					    
-						<div class="popular">
-							<ul>上一轮
-								<li>scores
-									<dl class="meta">
-										 <dd><a href="#"><%= @last_r_pic.scores.ceil %> </a></dd>
-									</dl>
-								</li>
-								<li>wins
-									<dl class="meta">
-										 <dd><a href="#"><%= @last_r_pic.wins %> </a></dd>
-									</dl>
-								</li>
-								<li>losses
-									<dl class="meta">
-										<!--<dt class="comments">Comments</dt>-->
-										 <dd><a href="#"><%= @last_r_pic.losses %> </a></dd>
-									</dl>
-								</li>
-								<li>tags
-									<dl class="meta">
-										<dd>
-											<% @pic = @last_r_pic %>
-											<%= render :partial => "shared/tagtext",  :locals => {:pic => @pic } %> 
-										</dd>
-									</dl>
-								</li>
-							</ul>
-							<p><a href="#">See history pick</a></p>
-						</div>	
-						<% end %>	
-					</li>
-				</ul>
-				
-			</div>
-			
-		</li>
-	</ul>
-</div>
-
-<div class="section"> 
-	<h2>&nbsp;</h2>
-	<ul class="news">
+<div class="row">
+	    	<div class="span10 offset1" >
+	    	<!-- Masthead 
+	    	================================================== -->
+			<header class="jumbotron subhead" id="overview">
+				<div class="row">
+					<div class="span2">
+					  <h1>Pick</h1>
+					  <p class="lead"></p>
 		
-		<!-- Post Content - start -->
-		<li>
-			<h2><a href="#">to be continued...</a></h2><!-- Title -->
-		</li>
-	</ul>
-	<!-- Pagination - end -->
-</div>
+					</div>
+				</div>
+							
+			</header>
+	    	
+				<!-- two pics -->
+				<div class="row ">
+					
+					<div class="span6">
+					  <div class="subnav">
+					    <ul class="nav nav-tabs">
+					      <li <% if (@SubjectId == nil || @SubjectId == '0') %> class="active" <%end%> ><%= link_to "全部",  :controller => "picks",:action => "new" %></li>
+					      <li <% if @SubjectId == '1' %> class="active" <%end%> ><%= link_to "美女",  :controller => "pick_subjects",:action => "show", :id => '1' %></li>
+					      <li <% if @SubjectId == '2' %> class="active" <%end%> ><%= link_to "风景",  :controller => "pick_subjects",:action => "show", :id => '2' %></li>
+					      <li><a href="#" data-toggle="tab">搞笑</a></li>
+					      <li><a href="#" data-toggle="tab">更多...</a></li>
+					    </ul>
+					  </div>
+				 	 </div>
+	
+				    <div class="span9 hero-unit">
+
+				      <h1>Hot Images</h1>
+
+				      <div class="row">
+				      	<div class="span7 offset1">
+						      <ul class="thumbnails">
+						        <li class="span3">
+						          <a href="#" class="thumbnail">
+						            <%= image_tag( @l_pic.bmiddle_pic, :id => "lpic") %>
+						          </a>
+						        </li>
+						        	
+						        <li class="span1">
+						        	<div class="row">&nbsp; <br><br><br><br></div>
+						        	<div class="buttons">
+					            	<%= link_to "Next", {:controller => "pick_subjects",:action =>"show", :id => @subjectId } , :class => "btn black" %> 
+				          		</div>
+						        </li>
+						        
+						        <li class="span3">
+						          <a href="#" class="thumbnail">
+						            <%= image_tag( @r_pic.bmiddle_pic, :id => "rpic") %>
+						          </a>
+						        </li>
+						      </ul>
+					      </div><!-- span7 -->
+					   </div><!-- row -->
+				    </div>
+				</div>
+				<!-- two pics end -->
+				<br>
+				
+				<div class="row">
+				<% if(@last_l_pic) %>
+	    		<div class="span9 hero-unit">
+	    			<h1>Your last pick</h1>
+	    			<div class="span3">
+			          	<div class="row">
+			          		<div class="span2 offset1">
+			          			<a href="#" class="thumbnail">
+						            <%= image_tag( @last_l_pic.bmiddle_pic, :id => "last_lpic") %>
+						          </a>
+			          		</div>
+			          		
+			          	</div>
+			          	<div class="row">
+			          		<div class="span2 offset1">
+						      <table class="table table-striped table-condensed">
+						        <thead>
+						          <tr>
+						           
+						            <th class="yellow">scores</th>
+						            <td class="blue"><%= @last_l_pic.scores.ceil %></td>
+						            
+						          </tr>
+						        </thead>
+						        <tbody>
+						          <tr>
+						          
+						            <th>wins</th>
+						            <td><%= @last_l_pic.wins %></td>
+						        
+						          </tr>
+						          <tr>
+						           
+						            <th>losses</th>
+						            <td><%= @last_l_pic.losses %></td>
+						          
+						          </tr>
+						          <tr>
+						      
+						            <th>tags</th>
+						            <td>
+						            	<% pic = @last_l_pic %>
+										<%= render :partial => "shared/tagtext",  :locals => {:pic => pic } %> 
+						            </td>
+						         
+						          </tr>
+						          <tr>
+						           
+						            <th></th>
+						            <td>See history pick</td>
+						         
+						          </tr>
+						        </tbody>
+						      </table>
+							</div>
+						</div>
+	    			</div>
+	    			
+	    			<div class="span3 offset2">
+	    				<div class="row">
+			          		<div class="span2">
+			          			<a href="#" class="thumbnail">
+						            <%= image_tag( @last_r_pic.bmiddle_pic, :id => "lasg_rpic") %>
+						          </a>
+			          		</div>
+			          	</div>
+
+			          	<div class="row">
+			          		<div class="span2">
+	    						<table class="table table-striped table-condensed">
+						        <thead>
+						          <tr>
+						           
+						            <th class="yellow">scores</th>
+						            <td class="blue"><%= @last_r_pic.scores.ceil %></td>
+						            
+						          </tr>
+						        </thead>
+						        <tbody>
+						          <tr>
+						          
+						            <th>wins</th>
+						            <td><%= @last_r_pic.wins %></td>
+						        
+						          </tr>
+						          <tr>
+						           
+						            <th>losses</th>
+						            <td><%= @last_r_pic.losses %></td>
+						          
+						          </tr>
+						          <tr>
+						      
+						            <th>tags</th>
+						            <td>
+						            	<% @pic = @last_r_pic %>
+										<%= render :partial => "shared/tagtext",  :locals => {:pic => @pic } %> 
+						            </td>
+						         
+						          </tr>
+						          <tr>
+						           
+						            <th></th>
+						            <td>See history pick</td>
+						         
+						          </tr>
+						        </tbody>
+						      </table>
+						    </div>
+						</div>
+			     	</div>
+	    		
+				</div>
+				<% end %>
+				
+				</div>
+		    </div>  <!--span10 -->
+	   </div>  <!-- row -->
+	   
 
 <% form_tag "/picks/create", :id => 'form' do -%>
   
-<div>
-	<input id="last_l_pic_id" name="last_l_pic_id" value=<%= @l_pic.id %> type="hidden" />
-	<input id="last_r_pic_id" name="last_r_pic_id" value=<%= @r_pic.id %> type="hidden" />
-	<input id="l_pic_id" name="l_pic_id" value=<%= @l_pic.id %> type="hidden" />
-	<input id="r_pic_id" name="r_pic_id" value=<%= @r_pic.id %> type="hidden" />
-	<input id="tmp_pic_id" name="tmp_pic_id" value=<%= @r_pic.id %> type="hidden" />
-	<input id="subjectId" name="subjectId" type="hidden" value=<%= @subjectId+'' %> />
-</div>
-
-<%= submit_tag "提 交", :class => "submit", :type =>"hidden" %>
+	<div>
+		<input id="last_l_pic_id" name="last_l_pic_id" value=<%= @l_pic.id %> type="hidden" />
+		<input id="last_r_pic_id" name="last_r_pic_id" value=<%= @r_pic.id %> type="hidden" />
+		<input id="l_pic_id" name="l_pic_id" value=<%= @l_pic.id %> type="hidden" />
+		<input id="r_pic_id" name="r_pic_id" value=<%= @r_pic.id %> type="hidden" />
+		<input id="tmp_pic_id" name="tmp_pic_id" value=<%= @r_pic.id %> type="hidden" />
+		<input id="subjectId" name="subjectId" type="hidden" value=<%= @subjectId+'' %> />
+	</div>
+	<%= submit_tag "提 交", :class => "submit", :type =>"hidden" %>
 
 <% end %>
+
 
  <script language="JavaScript" type="text/JavaScript">
 
