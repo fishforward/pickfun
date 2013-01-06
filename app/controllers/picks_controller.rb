@@ -1,3 +1,4 @@
+# encoding: utf-8
 class PicksController < ApplicationController
   # GET /picks
   # GET /picks.xml
