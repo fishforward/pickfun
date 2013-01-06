@@ -1,3 +1,4 @@
+# encoding: utf-8
 class PickSubjectsController < ApplicationController
 
   # GET /pick_subjects/1
