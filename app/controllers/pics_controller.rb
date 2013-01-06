@@ -1,3 +1,4 @@
+# encoding: utf-8
 require "util/time_utils"
 require "file/pic_file"
 
